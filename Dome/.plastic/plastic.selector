@@ -1,0 +1,4 @@
+repository "Dome@Hebdo@cloud"
+  path "/"
+    br "/main"
+    co "/main"
