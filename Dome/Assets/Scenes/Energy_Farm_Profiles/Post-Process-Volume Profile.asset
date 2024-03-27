@@ -59,13 +59,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b77c5407dc277943b591ade9e6b18c5, type: 3}
   m_Name: LensDistortion
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
   intensity:
     overrideState: 1
-    value: -28
+    value: -14
   intensityX:
     overrideState: 0
     value: 1
@@ -143,6 +143,7 @@ MonoBehaviour:
   - {fileID: 2554248223761420249}
   - {fileID: -3913946738427279837}
   - {fileID: -3864412898576108223}
+  - {fileID: 5345229812845319031}
 --- !u!114 &2554248223761420249
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -208,7 +209,7 @@ MonoBehaviour:
     value: -1
   saturation:
     overrideState: 0
-    value: 0
+    value: -4
   brightness:
     overrideState: 0
     value: 0
@@ -247,7 +248,7 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 0}
+    value: {x: 1, y: 0.8483093, z: 0.8732513, w: -0.04769463}
   gamma:
     overrideState: 0
     value: {x: 1, y: 1, z: 1, w: 0}
@@ -1478,7 +1479,7 @@ MonoBehaviour:
     value: 1.48
   color:
     overrideState: 1
-    value: {r: 0.2627451, g: 0.103713594, b: 0.059273757, a: 1}
+    value: {r: 0.1792453, g: 0.05858316, b: 0.026210396, a: 1}
   ambientOnly:
     overrideState: 0
     value: 1
@@ -1501,5 +1502,33 @@ MonoBehaviour:
     overrideState: 1
     value: 0.24
   quality:
+    overrideState: 1
+    value: 3
+--- !u!114 &5345229812845319031
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
+  m_Name: DepthOfField
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  focusDistance:
+    overrideState: 1
+    value: 3.35
+  aperture:
+    overrideState: 1
+    value: 5.1
+  focalLength:
+    overrideState: 0
+    value: 50
+  kernelSize:
     overrideState: 1
     value: 3
