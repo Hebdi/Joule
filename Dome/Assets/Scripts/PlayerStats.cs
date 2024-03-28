@@ -14,6 +14,7 @@ public class PlayerStats : MonoBehaviour
     public static int currentHealth;
     public HealthBar healthBar;
 
+    //How much Energy the Joule needs to use an ability or power a device
     public int energyUse = 10;
 
  
@@ -45,6 +46,8 @@ public class PlayerStats : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+
+
     }
 
 
@@ -63,6 +66,12 @@ public class PlayerStats : MonoBehaviour
             Destroy(other.gameObject);
             Debug.Log("You are fully charged!");
             healthBar.SetHealth(currentHealth);
+        }
+
+        if (other.gameObject.CompareTag("NPC") && (Input.GetKey(KeyCode.E)))
+        {
+            LoseHealth(energyUse);
+
         }
     }
 

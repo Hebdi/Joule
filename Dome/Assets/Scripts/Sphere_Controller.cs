@@ -15,7 +15,6 @@ public class Sphere_Controller : MonoBehaviour
 
 
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -102,6 +101,7 @@ public class Sphere_Controller : MonoBehaviour
             boost = boost + 2;
             Destroy(other.gameObject);
         }
+
     }
 
 

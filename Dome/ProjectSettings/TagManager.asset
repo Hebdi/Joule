@@ -9,6 +9,7 @@ TagManager:
   - BoostUpgrade
   - OffMap
   - EnergyRefill
+  - NPC
   layers:
   - Default
   - TransparentFX
