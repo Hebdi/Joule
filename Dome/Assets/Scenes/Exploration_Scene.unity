@@ -8436,7 +8436,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687645179}
   m_LocalRotation: {x: -0, y: 0.9410382, z: -0, w: -0.33830044}
-  m_LocalPosition: {x: -1130.8085, y: 0.74, z: -2357.3003}
+  m_LocalPosition: {x: -1183.3, y: 0.74, z: -2299.8}
   m_LocalScale: {x: 1.6621962, y: 1.2509686, z: 1.6621962}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12757,7 +12757,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.041040037, y: 0.000000034383774, z: -0.0000000014123013, w: 0.9991575}
+  m_LocalRotation: {x: 0.041040033, y: -0.000000034383774, z: 0.000000001412301, w: 0.9991575}
   m_LocalPosition: {x: 475.0106, y: -0.17432694, z: 941.6491}
   m_LocalScale: {x: 0.4091921, y: 0.53836805, z: 0.4122676}
   m_ConstrainProportionsScale: 0
@@ -18233,7 +18233,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996507632}
-  m_LocalRotation: {x: -7.061506e-10, y: 0.9991575, z: -0.041040033, w: -0.000000017191889}
+  m_LocalRotation: {x: 7.061503e-10, y: 0.9991575, z: -0.04104003, w: 0.000000017191882}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -22598,7 +22598,7 @@ GameObject:
   - component: {fileID: 1397792575}
   m_Layer: 0
   m_Name: DoorTrigger-Detection
-  m_TagString: DoorTrigger
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23269,7 +23269,7 @@ MonoBehaviour:
   alignment: 1
   textStyle: 1
   textStyleColor: {r: 0, g: 0, b: 0, a: 1}
-  inRangeColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  inRangeColor: {r: 0.17610055, g: 1, b: 0.9106415, a: 1}
   outOfRangeColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   reticle:
     inRange: {fileID: 0}

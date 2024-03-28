@@ -17,7 +17,9 @@ public class PlayerStats : MonoBehaviour
     //How much Energy the Joule needs to use an ability or power a device
     public int energyUse = 10;
 
- 
+    bool enter; // boolean to determine whether you are inside the trigger or outside
+
+
 
 
     void Start()
@@ -34,6 +36,11 @@ public class PlayerStats : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
+            LoseHealth(energyUse);
+        }
+
+        if (enter == true && Input.GetKeyDown(KeyCode.E)) // determine that only after the trigger is
+        {                                                   // true and you press space you can enter the house
             LoseHealth(energyUse);
         }
     }
@@ -68,10 +75,18 @@ public class PlayerStats : MonoBehaviour
             healthBar.SetHealth(currentHealth);
         }
 
-        if (other.gameObject.CompareTag("NPC") && (Input.GetKey(KeyCode.E)))
-        {
-            LoseHealth(energyUse);
+        if (GetComponent<Collider>().gameObject.CompareTag("NPC")) //entering the trigger/collider attached to the
+                                                      // Player. the NPC object must have tag named "NPC" 
+        {                                           // with both of these enter will only be true when you are 
+            enter = true;                           // inside the trigger
+        }
+    }
 
+    void OnTriggerExit(Collider collider)
+    {
+        if (collider.gameObject.CompareTag("NPC")) //exiting the trigger/collider attached to the 
+        {                                               // house cause enter to become false
+            enter = false;
         }
     }
 
