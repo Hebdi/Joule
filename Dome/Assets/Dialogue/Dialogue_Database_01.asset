@@ -963,8 +963,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Head over to the Visitor Center of Vault Tower. You should be able
-          to boot up the Energy Supplie Automaton.
+        value: On the other side of this Dune should be the Visitor Center of Vault
+          Tower. You should be able to boot up the Energy Supplie Automaton in there.
         type: 0
         typeString: 
       - title: Sequence
@@ -982,7 +982,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 14
         destinationConversationID: 1
-        destinationDialogueID: 15
+        destinationDialogueID: 33
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1054,8 +1054,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 645.82684
-        y: 436.5031
+        x: 642.53015
+        y: 552.98663
         width: 160
         height: 30
     - id: 17
@@ -1955,9 +1955,64 @@ MonoBehaviour:
         y: 529.6786
         width: 160
         height: 30
+    - id: 33
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: And then?
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: And then?
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 33
+        destinationConversationID: 1
+        destinationDialogueID: 15
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 666.70593
+        y: 449.68994
+        width: 160
+        height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.9100001
   syncInfo:
     syncActors: 0
     syncItems: 0
