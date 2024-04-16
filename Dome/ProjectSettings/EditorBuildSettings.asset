@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Exploration_Scene.unity
     guid: 54df11c8d0cdec54db4737bc89105a56
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Parcours-Level.unity
     guid: 40e67617e5209874c9912e512fe9d075
   m_configObjects: {}

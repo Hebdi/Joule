@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5312338463361743464}
   - component: {fileID: 6620061103327134036}
   - component: {fileID: 4014286519360446902}
-  - component: {fileID: 4544159221999097195}
+  - component: {fileID: 734546678603039573}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -173,8 +173,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4544159221999097195
-MeshCollider:
+--- !u!136 &734546678603039573
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -183,10 +183,10 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2534964839176971238, guid: 84cf28226b35a404085f1a8c48aacc3f, type: 3}
+  m_Radius: 0.030211324
+  m_Height: 0.1213931
+  m_Direction: 2
+  m_Center: {x: 0.00022071193, y: -0.0000009592148, z: 0.03408089}
 --- !u!1 &2991079411744007466
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,6 +451,7 @@ GameObject:
   - component: {fileID: 3705025499061243570}
   - component: {fileID: 343749781824225559}
   - component: {fileID: 2531526374159594973}
+  - component: {fileID: 3941203423466682313}
   m_Layer: 0
   m_Name: Birdhouse_Old
   m_TagString: Untagged
@@ -528,6 +529,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3941203423466682313
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4044572915255940104}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000013, y: 0.020000022, z: 0.002841098}
+  m_Center: {x: 0.00000024025258, y: -0.0000000055018625, z: -0.008579479}
 --- !u!1 &5466267592241428984
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,6 +637,7 @@ GameObject:
   - component: {fileID: 1152168669154333249}
   - component: {fileID: 3088673329981668423}
   - component: {fileID: 3843527148926342926}
+  - component: {fileID: 1226849470228861422}
   m_Layer: 0
   m_Name: Balancing-Foundation
   m_TagString: Untagged
@@ -698,6 +713,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1226849470228861422
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5651992398811360541}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000009, y: 0.02000002, z: 0.0028519223}
+  m_Center: {x: 0.0000000012228517, y: -0.00000024269792, z: -0.008574081}
 --- !u!1 &6267026817222919707
 GameObject:
   m_ObjectHideFlags: 0
