@@ -19,7 +19,8 @@ public class PlayerStats : MonoBehaviour
 
     bool enter; // boolean to determine whether you are inside the trigger or outside
 
-
+    //Pick Up Effekt for energy recharge
+    public GameObject pickupEffect;
 
 
     void Start()
@@ -63,6 +64,7 @@ public class PlayerStats : MonoBehaviour
         if (other.CompareTag("EnergyRefill") && PlayerStats.currentHealth < 80)
         {
             GainHealth(20);
+            Instantiate(pickupEffect, transform.position, transform.rotation);
             Destroy(other.gameObject);
 
         }
@@ -70,6 +72,7 @@ public class PlayerStats : MonoBehaviour
         else if (other.CompareTag("EnergyRefill") && PlayerStats.currentHealth >= 80)
         {
             currentHealth = 100;
+            Instantiate(pickupEffect, transform.position, transform.rotation);
             Destroy(other.gameObject);
             Debug.Log("You are fully charged!");
             healthBar.SetHealth(currentHealth);

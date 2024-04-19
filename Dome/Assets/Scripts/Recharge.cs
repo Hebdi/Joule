@@ -9,6 +9,8 @@ public class Recharge : MonoBehaviour
     public static int currentHealth;
     public HealthBar healthBar;
 
+    public GameObject pickupEffect;
+
 
 
     void OnTriggerEnter(Collider other)
@@ -16,6 +18,7 @@ public class Recharge : MonoBehaviour
         if (other.CompareTag("EnergyRefill") && PlayerStats.currentHealth < 80)
         {
             GainHealth(20);
+            Instantiate(pickupEffect, transform.position, transform.rotation);
             Destroy(other.gameObject);
 
         }
