@@ -6897,8 +6897,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: It's components are buildt with special alloy! It repells any and
-          all meteorological effects!
+        value: Glad you ask! It's components are buildt with special alloy! It repells
+          any and all meteorological effects!
         type: 0
         typeString: 
       - title: Sequence
@@ -7385,8 +7385,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.46000046
+    canvasScrollPosition: {x: 0, y: 61.643646}
+    canvasZoom: 0.5800004
   - id: 3
     fields:
     - title: Title
