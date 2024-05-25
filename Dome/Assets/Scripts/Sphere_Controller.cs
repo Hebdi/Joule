@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Sphere_Controller : MonoBehaviour
 {
+    // public GameObject dustTrail;
 
     public float speed;
     public float turnspeed;
@@ -50,16 +51,20 @@ public class Sphere_Controller : MonoBehaviour
             }
 
 
-
         if (Input.GetKey(KeyCode.W))
             {
                 rb.AddRelativeForce(-(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * 10));
+            //dustTrail.SetActive(true);
 
             if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
                 {
                     rb.AddRelativeForce(-(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * boost));
                 }
             }
+       // else
+        {
+           // dustTrail.SetActive(false);
+        }
             Vector3 localVelocity = transform.InverseTransformDirection(rb.velocity);
             localVelocity.x = 0;
             rb.velocity = transform.TransformDirection(localVelocity);
@@ -68,7 +73,7 @@ public class Sphere_Controller : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S))
         {
-            rb.AddTorque(Vector3.up * turnspeed * -10);
+            rb.AddTorque(Vector3.up * -turnspeed * -10);
         }
 
         else if (Input.GetKey(KeyCode.D))
@@ -78,7 +83,7 @@ public class Sphere_Controller : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S))
         {
-            rb.AddTorque(-Vector3.up * turnspeed * -10);
+            rb.AddTorque(-Vector3.up * -turnspeed * -10);
         }
 
         else if (Input.GetKey(KeyCode.A))

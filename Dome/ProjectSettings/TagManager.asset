@@ -10,6 +10,8 @@ TagManager:
   - OffMap
   - EnergyRefill
   - NPC
+  - CinemachineTarget
+  - CameraZone
   layers:
   - Default
   - TransparentFX

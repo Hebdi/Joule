@@ -290,7 +290,7 @@ MonoBehaviour:
   subtitleText:
     m_uiText: {fileID: 114700216258696300}
     m_textMeshProUGUI: {fileID: 0}
-  addSpeakerName: 0
+  addSpeakerName: 1
   addSpeakerNameFormat: '{0}: {1}'
   accumulateText: 1
   maxLines: 100
@@ -301,7 +301,7 @@ MonoBehaviour:
   focusAnimationTrigger: 
   unfocusAnimationTrigger: 
   onlyShowNPCPortraits: 0
-  useAnimatedPortraits: 1
+  useAnimatedPortraits: 0
   usePortraitNativeSize: 0
   waitForOpen: 0
   waitForClose: 0
@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 114054343509046778}
   - component: {fileID: 114547911188978186}
   m_Layer: 5
-  m_Name: Response Button Template
+  m_Name: Response Button (ANTWORT)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
-    m_HighlightedColor: {r: 0.75, g: 1, b: 0.9535893, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.827451, b: 0.77787304, a: 1}
     m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -514,7 +514,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055504699021342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -610,7 +610,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114879554413188470}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.StandardUIContinueButtonFastForward,
+          DialogueSystem
         m_MethodName: OnFastForward
         m_Mode: 1
         m_Arguments:
@@ -1072,7 +1073,7 @@ GameObject:
   - component: {fileID: 114700216258696300}
   - component: {fileID: 114580007409380616}
   m_Layer: 5
-  m_Name: Subtitle Text
+  m_Name: Subtitle Text (NPC TEXT)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1119,7 +1120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6462264, g: 1, b: 0.8519667, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1134,11 +1135,11 @@ MonoBehaviour:
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 3
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.2
   m_Text: (Subtitle Text)
 --- !u!114 &114580007409380616
 MonoBehaviour:
@@ -1153,7 +1154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightToLeft: 0
-  charactersPerSecond: 50
+  charactersPerSecond: 80
   audioClip: {fileID: 0}
   alternateAudioClips: []
   audioSource: {fileID: 0}
@@ -1164,8 +1165,8 @@ MonoBehaviour:
   silentCharacters: 
   fullPauseCharacters: 
   quarterPauseCharacters: 
-  fullPauseDuration: 1
-  quarterPauseDuration: 0.25
+  fullPauseDuration: 0
+  quarterPauseDuration: 0
   removeDuplicateTypewriterEffects: 1
   playOnEnable: 0
   waitOneFrameBeforeStarting: 0
@@ -1737,7 +1738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
+  m_Color: {r: 0.3915094, g: 0.6313726, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1855,7 +1856,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -410, y: -10.9}
+  m_AnchoredPosition: {x: -410, y: -10.900024}
   m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &222145572209684204
@@ -1932,7 +1933,7 @@ GameObject:
   - component: {fileID: 222325820731179604}
   - component: {fileID: 114792940509326022}
   m_Layer: 5
-  m_Name: Main Panel
+  m_Name: Main Panel (DIALOG BOX)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1981,7 +1982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.39215687, g: 0.6313726, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2092,7 +2093,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
+    m_Top: 20
     m_Bottom: 0
   m_ChildAlignment: 0
   m_Spacing: 0
@@ -2425,7 +2426,7 @@ GameObject:
   - component: {fileID: 114217581334875540}
   - component: {fileID: 114724462227693264}
   m_Layer: 5
-  m_Name: Response Text
+  m_Name: Response Text (ANTWORT)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
