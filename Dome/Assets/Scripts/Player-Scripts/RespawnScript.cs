@@ -12,7 +12,7 @@ public class RespawnScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.G))
         {
-            transform.position = new Vector3(-4833.9599609375f, 103.46600341796875f, -1806.7900390625f);
+            transform.position = new Vector3(-4484.958984375f, 14f, -2720.81591796875f);
         }
     }
 
@@ -21,11 +21,12 @@ public class RespawnScript : MonoBehaviour
         if (other.CompareTag("OffMap"))
         {
 
-            transform.position = new Vector3(-3739.86865234375f, 14.270000457763672f, -1485.2315673828125f);
+            transform.position = new Vector3(-4484.958984375f, 14f, -2720.81591796875f);
 
         }
     }
 }
+//Infront of Bridge: UnityEditor.TransformWorldPlacementJSON:{"position":{"x":-4484.958984375,"y":14.0,"z":-2720.81591796875},"rotation":{"x":0.0,"y":0.9975530505180359,"z":0.0,"w":0.0699143037199974},"scale":{"x":7.0,"y":7.0,"z":7.0}}
 //UnityEditor.TransformWorldPlacementJSON:{ "position":{ "x":-955.2474365234375,"y":0.01759999990463257,"z":-865.030517578125},"rotation":{ "x":0.0,"y":0.0,"z":0.0,"w":1.0},"scale":{ "x":1.0,"y":1.0,"z":1.0} } Behind Hill
 //UnityEditor.TransformWorldPlacementJSON:{"position":{"x":-1581.469970703125,"y":90.11299896240235,"z":-1186.8599853515625},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"scale":{"x":1.0,"y":1.0,"z":1.0}} On DinerHill
 //UnityEditor.TransformWorldPlacementJSON:{"position":{"x":-2809.263916015625,"y":90.97000122070313,"z":-2606.365966796875},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"scale":{"x":1.0,"y":1.0,"z":1.0}} On CanyonHill

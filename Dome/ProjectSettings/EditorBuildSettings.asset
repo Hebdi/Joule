@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: ff135622b18b35f4aaa3b2eb9fb6ef57
   - enabled: 1
-    path: Assets/Scenes/Playtesting.unity
+    path: Assets/Scenes/WindMonument.unity
     guid: 2546412c9cefef0419cb16bee95550a9
   - enabled: 0
     path: Assets/Scenes/Exploration_Scene.unity
