@@ -5,6 +5,10 @@ using UnityEngine;
 public class RespawnScript : MonoBehaviour
 {
 
+    public GameObject DinerPosition;
+    public GameObject BridgePosition;
+    public GameObject VariablePosition;
+    //[SerializeField] private GameObject _destinationPosition;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -12,7 +16,16 @@ public class RespawnScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.G))
         {
-            transform.position = new Vector3(-4484.958984375f, 14f, -2720.81591796875f);
+            // transform.position = new Vector3(-4484.958984375f, 14f, -2720.81591796875f);
+            transform.position = BridgePosition.transform.position;
+        }
+        if (Input.GetKey(KeyCode.H))
+        {
+            transform.position = DinerPosition.transform.position;
+        }
+        if (Input.GetKey(KeyCode.J))
+        {
+            transform.position = VariablePosition.transform.position;
         }
     }
 
@@ -21,7 +34,7 @@ public class RespawnScript : MonoBehaviour
         if (other.CompareTag("OffMap"))
         {
 
-            transform.position = new Vector3(-4484.958984375f, 14f, -2720.81591796875f);
+            transform.position = BridgePosition.transform.position;
 
         }
     }
