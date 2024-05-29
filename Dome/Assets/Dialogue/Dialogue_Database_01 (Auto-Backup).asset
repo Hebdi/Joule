@@ -8628,7 +8628,7 @@ MonoBehaviour:
   - id: 4
     fields:
     - title: Title
-      value: FunkyFrdige
+      value: FunkyFridige
       type: 0
       typeString: CustomFieldType_Text
     - title: Description
@@ -8859,7 +8859,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: What are you?
+        value: Who are you?
         type: 0
         typeString: 
       - title: Sequence
@@ -8986,7 +8986,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 5
+        destinationConversationID: 4
+        destinationDialogueID: 13
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -9333,6 +9339,12 @@ MonoBehaviour:
         originDialogueID: 11
         destinationConversationID: 4
         destinationDialogueID: 12
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 11
+        destinationConversationID: 4
+        destinationDialogueID: 13
         isConnector: 0
         priority: 2
       conditionsString: 
