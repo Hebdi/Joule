@@ -733,7 +733,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 8
+        destinationConversationID: 1
+        destinationDialogueID: 74
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -741,8 +747,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 282.5243
-        y: 600.7392
+        x: 287.69672
+        y: 609.3599
         width: 160
         height: 30
     - id: 17
@@ -898,13 +904,13 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 19
         destinationConversationID: 1
-        destinationDialogueID: 20
+        destinationDialogueID: 21
         isConnector: 0
         priority: 2
       - originConversationID: 1
         originDialogueID: 19
         destinationConversationID: 1
-        destinationDialogueID: 21
+        destinationDialogueID: 20
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -955,7 +961,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 20
+        destinationConversationID: 1
+        destinationDialogueID: 74
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -1045,7 +1057,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I'm Joule Unit 12. Automated restoration entity.
+        value: // Joule Unit 12. Automated restoration entity.
         type: 0
         typeString: 
       - title: Sequence
@@ -1076,6 +1088,12 @@ MonoBehaviour:
         originDialogueID: 22
         destinationConversationID: 1
         destinationDialogueID: 39
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 22
+        destinationConversationID: 1
+        destinationDialogueID: 8
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1318,7 +1336,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1033.8931
+        x: 1032.0748
         y: 369.24115
         width: 160
         height: 30
@@ -1421,12 +1439,6 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 28
         destinationConversationID: 1
-        destinationDialogueID: 8
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 28
-        destinationConversationID: 1
         destinationDialogueID: 29
         isConnector: 0
         priority: 2
@@ -1434,6 +1446,12 @@ MonoBehaviour:
         originDialogueID: 28
         destinationConversationID: 1
         destinationDialogueID: 39
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 28
+        destinationConversationID: 1
+        destinationDialogueID: 8
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1525,7 +1543,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Monuments of Recovery // '
+        value: // Monuments of Recovery
         type: 0
         typeString: 
       - title: Sequence
@@ -1580,7 +1598,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Extremely powerful energy plants.
+        value: // Extremely powerful energy plants.
         type: 0
         typeString: 
       - title: Sequence
@@ -1635,7 +1653,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Purpose // Restoration of Earth.
+        value: '// Purpose: Restoration of Earth.'
         type: 0
         typeString: 
       - title: Sequence
@@ -2058,7 +2076,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 12th generation Joule Unit. Constructed by Joule Corporation in 2056.
+        value: // 12th generation Joule Unit. Constructed by Joule Corporation in
+          2056.
         type: 0
         typeString: 
       - title: Sequence
@@ -2083,6 +2102,12 @@ MonoBehaviour:
         originDialogueID: 40
         destinationConversationID: 1
         destinationDialogueID: 24
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 40
+        destinationConversationID: 1
+        destinationDialogueID: 8
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2174,7 +2199,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Joule Corporation //
+        value: // Joule Corporation
         type: 0
         typeString: 
       - title: Sequence
@@ -2229,7 +2254,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Leading company for energy supply in the 21th century.
+        value: // Leading company for energy supply in the 21th century.
         type: 0
         typeString: 
       - title: Sequence
@@ -2284,7 +2309,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Responsible for building the the Monuments of Recovery.
+        value: // Responsible for building the the Monuments of Recovery.
         type: 0
         typeString: 
       - title: Sequence
@@ -2309,6 +2334,12 @@ MonoBehaviour:
         originDialogueID: 47
         destinationConversationID: 1
         destinationDialogueID: 54
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 47
+        destinationConversationID: 1
+        destinationDialogueID: 24
         isConnector: 0
         priority: 2
       - originConversationID: 1
@@ -2382,6 +2413,12 @@ MonoBehaviour:
         originDialogueID: 48
         destinationConversationID: 1
         destinationDialogueID: 71
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 48
+        destinationConversationID: 1
+        destinationDialogueID: 8
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2613,7 +2650,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1222.1467
+        x: 1220.7181
         y: 978.3899
         width: 160
         height: 30
@@ -2640,7 +2677,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Sand came long after I got stuck here.
+        value: Sand came long after I got stuck.
         type: 0
         typeString: 
       - title: Sequence
@@ -2659,6 +2696,12 @@ MonoBehaviour:
         originDialogueID: 53
         destinationConversationID: 1
         destinationDialogueID: 54
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 53
+        destinationConversationID: 1
+        destinationDialogueID: 8
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2750,7 +2793,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 184 years, 4 months, 11 days.
+        value: // 184 years, 4 months, 11 days.
         type: 0
         typeString: 
       - title: Sequence
@@ -3476,7 +3519,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: This valley is part of worlds biggest outdoor exhibition.
+        value: This valley is part of the worlds biggest outdoor exhibition.
         type: 0
         typeString: 
       - title: Sequence
@@ -3681,8 +3724,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1026.2465
-        y: 924.7311
+        x: 1027.466
+        y: 930.8286
         width: 160
         height: 30
     - id: 72
@@ -3787,13 +3830,13 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 73
         destinationConversationID: 1
-        destinationDialogueID: 8
+        destinationDialogueID: 2
         isConnector: 0
         priority: 2
       - originConversationID: 1
         originDialogueID: 73
         destinationConversationID: 1
-        destinationDialogueID: 2
+        destinationDialogueID: 8
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3807,9 +3850,58 @@ MonoBehaviour:
         y: 1234.9469
         width: 160
         height: 30
+    - id: 74
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: The Joule Corporation wishes you luck!
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 287.69672
+        y: 659.3599
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 374.05835}
-    canvasZoom: 0.9099996
+    canvasScrollPosition: {x: 0, y: 20.460361}
+    canvasZoom: 0.52
   - id: 2
     fields:
     - title: Title
@@ -8916,8 +9008,8 @@ MonoBehaviour:
       - title: Dialogue Text
         value: 'I''m a Funky Fridge my Friend!
 
-          I contain a cool breeze,
-          to freeze all things from chees to liver from the geese!'
+          I give you the groove to
+          move smooth!'
         type: 0
         typeString: 
       - title: Sequence
@@ -8972,7 +9064,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Aaaand also I give you the groove to move smooth!
+        value: Aaaand also I contain a cool breeze, to freeze all things from chees
+          to liver from the geese!
         type: 0
         typeString: 
       - title: Sequence
@@ -9567,7 +9660,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Yes! That''s what they said.
+        value: 'Yes! That''s what they all said.
 
 '
         type: 0
@@ -10194,7 +10287,31 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 26
+        destinationConversationID: 4
+        destinationDialogueID: 27
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 26
+        destinationConversationID: 4
+        destinationDialogueID: 17
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 26
+        destinationConversationID: 4
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 26
+        destinationConversationID: 4
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -10202,8 +10319,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 562.8048
-        y: 428.97562
+        x: 561.58527
+        y: 435.0732
         width: 160
         height: 30
     - id: 27
@@ -10250,6 +10367,12 @@ MonoBehaviour:
         destinationDialogueID: 28
         isConnector: 0
         priority: 2
+      - originConversationID: 4
+        originDialogueID: 27
+        destinationConversationID: 4
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -10284,7 +10407,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You got it right, that is my job!
+        value: Ou yeah! It's my profession and also my passion!
         type: 0
         typeString: 
       - title: Sequence
@@ -10298,7 +10421,31 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 28
+        destinationConversationID: 4
+        destinationDialogueID: 25
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 28
+        destinationConversationID: 4
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 28
+        destinationConversationID: 4
+        destinationDialogueID: 17
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 28
+        destinationConversationID: 4
+        destinationDialogueID: 29
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -10306,12 +10453,295 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 757.92676
-        y: 428.97562
+        x: 759.14624
+        y: 436.29272
+        width: 160
+        height: 30
+    - id: 29
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: What's the point of combining these two?
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 29
+        destinationConversationID: 4
+        destinationDialogueID: 31
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 759.14624
+        y: 486.29272
+        width: 160
+        height: 30
+    - id: 31
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: // Smart Tech Devices are created to serve multiple purposes.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 31
+        destinationConversationID: 4
+        destinationDialogueID: 32
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 760.3657
+        y: 536.2928
+        width: 160
+        height: 30
+    - id: 32
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: // By combining several appliances into one, we not only save space,
+          but we also save ressources and energy and thus contribute to the global
+          change initiative!
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 32
+        destinationConversationID: 4
+        destinationDialogueID: 33
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 760.3657
+        y: 586.2928
+        width: 160
+        height: 30
+    - id: 33
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '// Smart Tech: Devices for Tomorrow!'
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 33
+        destinationConversationID: 4
+        destinationDialogueID: 34
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 33
+        destinationConversationID: 4
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 760.3657
+        y: 636.2928
+        width: 160
+        height: 30
+    - id: 34
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Umm...you didn't rhyme this time?
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 34
+        destinationConversationID: 4
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 760.3657
+        y: 686.2928
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 15.853699}
+    canvasScrollPosition: {x: 0, y: 30.487793}
     canvasZoom: 0.8200002
   syncInfo:
     syncActors: 0
