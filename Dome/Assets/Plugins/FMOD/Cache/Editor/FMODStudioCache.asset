@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1014333008612389689
+--- !u!114 &-8397288077631753406
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,16 +9,388 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC Activation Sound
   m_EditorClassIdentifier: 
-  Path: ../../../02_FMOD/Joule fMod/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638521649364047224
-  FileSizes:
-  - Name: Desktop
-    Value: 902
+  Path: event:/NPC/NPC Activation Sound
+  Guid:
+    Data1: 2097551229
+    Data2: 1080369317
+    Data3: -682319995
+    Data4: 680210721
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1601
+--- !u!114 &-7634261934135191183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind Strenght
+  m_EditorClassIdentifier: 
+  Name: Wind Strenght
+  StudioPath: parameter:/Wind Strenght
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 2469871777
+    data2: 3252502149
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-7595734468401637065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC Deactivation Sound
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC Deactivation Sound
+  Guid:
+    Data1: 290911910
+    Data2: 1291021328
+    Data3: 1532454805
+    Data4: -1675026581
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6789132000230769474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Player Happy Short
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Player Happy Short
+  Guid:
+    Data1: -156859661
+    Data2: 1251910790
+    Data3: -480733791
+    Data4: 69721438
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1875
+--- !u!114 &-6190308760424652072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Engine/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1025506734
+    data2: 1448450716
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-5784893085157400829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Environment/Sand in the wind
+  m_EditorClassIdentifier: 
+  Name: Sand in the wind
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3315495322
+    data2: 3966483321
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-5740259620496843143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC Talk 3
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC Talk 3
+  Guid:
+    Data1: -14308885
+    Data2: 1099289435
+    Data3: -1242819930
+    Data4: -1147589664
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 160000
+--- !u!114 &-5654620104380533221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Terrains
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Terrains
+  Guid:
+    Data1: 49626774
+    Data2: 1099171288
+    Data3: -1133323611
+    Data4: 400472365
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5196773070790540547}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 18500
+--- !u!114 &-5274355527491502609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Stinger
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Stinger
+  Guid:
+    Data1: 293854068
+    Data2: 1148256718
+    Data3: 1737986456
+    Data4: 640551296
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 9283
+--- !u!114 &-5111705555995329145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Click
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Click
+  Guid:
+    Data1: -350424149
+    Data2: 1110800881
+    Data3: -1794365296
+    Data4: -1406505980
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 625
+--- !u!114 &-4477522129771295425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Engine
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Engine
+  Guid:
+    Data1: 2127678014
+    Data2: 1209733882
+    Data3: 465796998
+    Data4: 159731970
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6190308760424652072}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 235003
+--- !u!114 &-3920766131462609860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Environment/Wind Strenght
+  m_EditorClassIdentifier: 
+  Name: Wind Strenght
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 2469871777
+    data2: 3252502149
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-3288822466681194051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Ragtime
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Ragtime
+  Guid:
+    Data1: 1721522928
+    Data2: 1163743781
+    Data3: -917700452
+    Data4: -1252674588
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 131053
+--- !u!114 &-3150709325515052072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Other/Collecting Battery
+  m_EditorClassIdentifier: 
+  Path: event:/Other/Collecting Battery
+  Guid:
+    Data1: -1177919529
+    Data2: 1329503522
+    Data3: -164095563
+    Data4: 1523045938
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2333774505804844869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sand in the wind
+  m_EditorClassIdentifier: 
+  Name: Sand in the wind
+  StudioPath: parameter:/Sand in the wind
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3315495322
+    data2: 3966483321
+  Type: 0
+  IsGlobal: 1
+  Labels: []
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -33,20 +405,129 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -1014333008612389689}
-  - {fileID: 8665518267220654844}
+  - {fileID: 963629068847726208}
+  - {fileID: 2157952747921864828}
   EditorEvents:
-  - {fileID: 1883847415242543486}
-  - {fileID: 1909571163663987453}
-  - {fileID: 860132271328535133}
+  - {fileID: 1145248355037478917}
+  - {fileID: 7761003856258797910}
+  - {fileID: 6513697716912773937}
+  - {fileID: -4477522129771295425}
+  - {fileID: 405045827682107314}
+  - {fileID: 214953127663989741}
+  - {fileID: 8102495653316532036}
+  - {fileID: -5274355527491502609}
+  - {fileID: -8397288077631753406}
+  - {fileID: 3643829720828300656}
+  - {fileID: -5654620104380533221}
+  - {fileID: 1229912991176011029}
+  - {fileID: 8041939393984036790}
+  - {fileID: 2152681065614514222}
+  - {fileID: 3246718583781371487}
+  - {fileID: -7595734468401637065}
+  - {fileID: -5111705555995329145}
+  - {fileID: 374463127900767518}
+  - {fileID: 7448941664441300725}
+  - {fileID: 2142641690004289411}
+  - {fileID: 5160104778374817117}
+  - {fileID: -3150709325515052072}
+  - {fileID: -5740259620496843143}
+  - {fileID: 1442195303308199901}
+  - {fileID: -3288822466681194051}
+  - {fileID: -6789132000230769474}
   EditorParameters:
   - {fileID: 576468932334918762}
+  - {fileID: 1296286425734807573}
+  - {fileID: 1261663628713963533}
+  - {fileID: -7634261934135191183}
+  - {fileID: -2333774505804844869}
   MasterBanks:
-  - {fileID: 8665518267220654844}
+  - {fileID: 2157952747921864828}
   StringsBanks:
-  - {fileID: -1014333008612389689}
-  cacheTime: 638521649364047224
+  - {fileID: 963629068847726208}
+  cacheTime: 638527934388431110
   cacheVersion: 131609
+--- !u!114 &214953127663989741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC Talk 4
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC Talk 4
+  Guid:
+    Data1: 1246274626
+    Data2: 1078494102
+    Data3: -38728576
+    Data4: 644088968
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 160000
+--- !u!114 &374463127900767518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Energy Bar Decreasing
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Energy Bar Decreasing
+  Guid:
+    Data1: -151676755
+    Data2: 1265563919
+    Data3: 1336017853
+    Data4: -679130349
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &405045827682107314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music Master
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music Master
+  Guid:
+    Data1: 2064176704
+    Data2: 1120960697
+    Data3: -1213210214
+    Data4: -1351360385
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5891691462138828877}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 334285
 --- !u!114 &576468932334918762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +552,27 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &860132271328535133
+--- !u!114 &963629068847726208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Joule fMod/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638527934388431110
+  FileSizes:
+  - Name: Desktop
+    Value: 2288
+  Exists: 1
+--- !u!114 &1145248355037478917
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -81,24 +582,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ragtime
+  m_Name: event:/UI/Energy Bar Refilling
   m_EditorClassIdentifier: 
-  Path: event:/Ragtime
+  Path: event:/UI/Energy Bar Refilling
   Guid:
-    Data1: 1721522928
-    Data2: 1163743781
-    Data3: -917700452
-    Data4: -1252674588
+    Data1: -225300717
+    Data2: 1096359579
+    Data3: 89443214
+    Data4: -334166975
   Banks:
-  - {fileID: 8665518267220654844}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 131053
---- !u!114 &1672985589573049987
+  Length: 0
+--- !u!114 &1229912991176011029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Other/Using Upgrade Station
+  m_EditorClassIdentifier: 
+  Path: event:/Other/Using Upgrade Station
+  Guid:
+    Data1: 811757207
+    Data2: 1335459420
+    Data3: 1216162223
+    Data4: -635519335
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3112
+--- !u!114 &1261663628713963533
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,7 +636,285 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/Interesting moment
+  m_Name: parameter:/Terrain type
+  m_EditorClassIdentifier: 
+  Name: Terrain type
+  StudioPath: parameter:/Terrain type
+  Min: 1
+  Max: 3
+  Default: 1
+  ID:
+    data1: 2584700209
+    data2: 659422711
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &1296286425734807573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind through Cracks
+  m_EditorClassIdentifier: 
+  Name: Wind through Cracks
+  StudioPath: parameter:/Wind through Cracks
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 62791901
+    data2: 2167799725
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &1442195303308199901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Monument/Monument Talk
+  m_EditorClassIdentifier: 
+  Path: event:/Monument/Monument Talk
+  Guid:
+    Data1: -118105362
+    Data2: 1084019911
+    Data3: 1525367220
+    Data4: -492651250
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 289625
+--- !u!114 &1444423805901647569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Environment/Wind through Cracks
+  m_EditorClassIdentifier: 
+  Name: Wind through Cracks
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 62791901
+    data2: 2167799725
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &2142641690004289411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC Talk 5
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC Talk 5
+  Guid:
+    Data1: -374366781
+    Data2: 1244590773
+    Data3: -1982749553
+    Data4: -287789216
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 160000
+--- !u!114 &2152681065614514222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Player Sad Long
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Player Sad Long
+  Guid:
+    Data1: 996322203
+    Data2: 1327432973
+    Data3: -1765387130
+    Data4: 1362996539
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 14899
+--- !u!114 &2157952747921864828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Joule fMod/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638527934381868724
+  FileSizes:
+  - Name: Desktop
+    Value: 41856352
+  Exists: 1
+--- !u!114 &3246718583781371487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Bump
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Bump
+  Guid:
+    Data1: -2126408802
+    Data2: 1147213622
+    Data3: 145108118
+    Data4: 426173100
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2250
+--- !u!114 &3643829720828300656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Monument/Monument Steelbeams
+  m_EditorClassIdentifier: 
+  Path: event:/Monument/Monument Steelbeams
+  Guid:
+    Data1: 920129926
+    Data2: 1290830760
+    Data3: 1147590329
+    Data4: -1686350313
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 158905
+--- !u!114 &5160104778374817117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Player Sad Short
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Player Sad Short
+  Guid:
+    Data1: -770241840
+    Data2: 1340946011
+    Data3: -1616348508
+    Data4: -1063941661
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1875
+--- !u!114 &5196773070790540547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Terrains/Terrain type
+  m_EditorClassIdentifier: 
+  Name: Terrain type
+  StudioPath: 
+  Min: 1
+  Max: 3
+  Default: 1
+  ID:
+    data1: 2584700209
+    data2: 659422711
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &5891691462138828877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music Master/Interesting moment
   m_EditorClassIdentifier: 
   Name: Interesting moment
   StudioPath: 
@@ -122,7 +928,7 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &1883847415242543486
+--- !u!114 &6513697716912773937
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,25 +938,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music
+  m_Name: event:/Player/Player Happy Long
   m_EditorClassIdentifier: 
-  Path: event:/Music
+  Path: event:/Player/Player Happy Long
   Guid:
-    Data1: 2064176704
-    Data2: 1120960697
-    Data3: -1213210214
-    Data4: -1351360385
+    Data1: 1259403554
+    Data2: 1256537931
+    Data3: -1427652967
+    Data4: 1878377100
   Banks:
-  - {fileID: 8665518267220654844}
+  - {fileID: 2157952747921864828}
   IsStream: 1
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
-  Parameters:
-  - {fileID: 1672985589573049987}
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 334285
---- !u!114 &1909571163663987453
+  Length: 12899
+--- !u!114 &7448941664441300725
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,24 +965,81 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Stinger
+  m_Name: event:/NPC/NPC Talk 2
   m_EditorClassIdentifier: 
-  Path: event:/Stinger
+  Path: event:/NPC/NPC Talk 2
   Guid:
-    Data1: 293854068
-    Data2: 1148256718
-    Data3: 1737986456
-    Data4: 640551296
+    Data1: -1780817741
+    Data2: 1240851465
+    Data3: 46841007
+    Data4: 1077639360
   Banks:
-  - {fileID: 8665518267220654844}
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 160000
+--- !u!114 &7761003856258797910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment
+  m_EditorClassIdentifier: 
+  Path: event:/Environment
+  Guid:
+    Data1: -1393883367
+    Data2: 1111156072
+    Data3: 256628119
+    Data4: -660758131
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1444423805901647569}
+  - {fileID: -5784893085157400829}
+  - {fileID: -3920766131462609860}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 97875
+--- !u!114 &8041939393984036790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Cursor Hover Text
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Cursor Hover Text
+  Guid:
+    Data1: -2003372905
+    Data2: 1081435047
+    Data3: -286386261
+    Data4: -114710208
+  Banks:
+  - {fileID: 2157952747921864828}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 9283
---- !u!114 &8665518267220654844
+  Length: 1375
+--- !u!114 &8102495653316532036
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,14 +1048,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC Talk 1
   m_EditorClassIdentifier: 
-  Path: ../../../02_FMOD/Joule fMod/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638521649364037192
-  FileSizes:
-  - Name: Desktop
-    Value: 15632096
-  Exists: 1
+  Path: event:/NPC/NPC Talk 1
+  Guid:
+    Data1: -178095548
+    Data2: 1134104782
+    Data3: 1697069195
+    Data4: -285541470
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 160000

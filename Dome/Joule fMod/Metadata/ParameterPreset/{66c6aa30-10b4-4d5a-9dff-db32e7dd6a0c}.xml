@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{66c6aa30-10b4-4d5a-9dff-db32e7dd6a0c}">
+		<property name="name">
+			<value>Interesting moment</value>
+		</property>
+		<relationship name="folder">
+			<destination>{3912e7f8-e416-4de2-8cb7-aed7eaff46ba}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{44473885-bf55-48e7-b716-5c651d2aaeb8}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{44473885-bf55-48e7-b716-5c651d2aaeb8}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.2199999988079071</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

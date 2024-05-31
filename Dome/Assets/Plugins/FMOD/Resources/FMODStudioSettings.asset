@@ -283,8 +283,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../../02_FMOD/Joule fMod/Joule fMod.fspro
-  sourceBankPath: ../../../02_FMOD/Joule fMod/Build
+  sourceProjectPath: Joule fMod/Joule fMod.fspro
+  sourceBankPath: Joule fMod/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1

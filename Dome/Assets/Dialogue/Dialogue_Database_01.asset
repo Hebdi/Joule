@@ -7540,8 +7540,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 61.643646}
-    canvasZoom: 0.5800004
+    canvasScrollPosition: {x: 85.71413, y: 0}
+    canvasZoom: 0.7000003
   - id: 3
     fields:
     - title: Title
@@ -9565,13 +9565,13 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 6
         destinationConversationID: 4
-        destinationDialogueID: 11
+        destinationDialogueID: 17
         isConnector: 0
         priority: 2
       - originConversationID: 4
         originDialogueID: 6
         destinationConversationID: 4
-        destinationDialogueID: 17
+        destinationDialogueID: 11
         isConnector: 0
         priority: 2
       conditionsString: 

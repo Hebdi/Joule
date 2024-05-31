@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{25c310db-0dd2-4586-bdde-cc255c06a32d}">
+		<property name="name">
+			<value>Wind through Cracks</value>
+		</property>
+		<relationship name="folder">
+			<destination>{3912e7f8-e416-4de2-8cb7-aed7eaff46ba}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{13611906-53d6-4ea4-bc2b-6f3cb6d3e8a6}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{13611906-53d6-4ea4-bc2b-6f3cb6d3e8a6}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
