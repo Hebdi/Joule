@@ -12,6 +12,7 @@ TagManager:
   - NPC
   - CinemachineTarget
   - CameraZone
+  - MusicZone
   layers:
   - Default
   - TransparentFX

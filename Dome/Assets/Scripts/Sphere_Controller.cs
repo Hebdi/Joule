@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Sphere_Controller : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Sphere_Controller : MonoBehaviour
 
     private Rigidbody rb;
 
+    [SerializeField] private EventReference upgradeSound;
 
 
     // Start is called before the first frame update
@@ -105,6 +107,7 @@ public class Sphere_Controller : MonoBehaviour
            
             boost = boost + 2;
             Destroy(other.gameObject);
+            AudioManager.instance.PlayOneShot(upgradeSound, this.transform.position); //play Audio when entering upgrade collider
         }
 
     }
