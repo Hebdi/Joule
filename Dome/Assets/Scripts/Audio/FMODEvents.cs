@@ -5,8 +5,8 @@ using FMODUnity;
 
 public class FMODEvents : MonoBehaviour
 {
-   // [field: Header("Player Roll SFX")]
-   // [field: SerializeField] public EventReference playerRollSound { get; private set; }
+    //[field: Header("Player Roll SFX")]
+    //[field: SerializeField] public EventReference playerRollSound { get; private set; }
 
     [field: Header("Battery SFX")]
     [field: SerializeField] public EventReference energyCollect { get; private set; }

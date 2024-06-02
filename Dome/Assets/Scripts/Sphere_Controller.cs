@@ -18,6 +18,7 @@ public class Sphere_Controller : MonoBehaviour
     [SerializeField] private EventReference upgradeSound;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,7 +58,7 @@ public class Sphere_Controller : MonoBehaviour
             {
                 rb.AddRelativeForce(-(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * 10));
             //dustTrail.SetActive(true);
-           // AudioManager.instance.PlayOneShot(FMODEvents.instance.playerRollSound, this.transform.position); //Play Roll Sound
+           //AudioManager.instance.PlayOneShot(FMODEvents.instance.playerRollSound, this.transform.position); //Play Roll Sound
 
             if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
                 {

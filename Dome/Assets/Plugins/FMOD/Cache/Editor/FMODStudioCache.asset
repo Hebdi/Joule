@@ -105,6 +105,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1875
+--- !u!114 &-6617734173966727517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC Computer Activation Sound
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC Computer Activation Sound
+  Guid:
+    Data1: 341586734
+    Data2: 1123033660
+    Data3: 396236445
+    Data4: 1917280759
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 837
 --- !u!114 &-6190308760424652072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +316,34 @@ MonoBehaviour:
   - {fileID: -6190308760424652072}
   MinDistance: 1
   MaxDistance: 20
-  Length: 235003
+  Length: 232128
+--- !u!114 &-4407956873959372714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC Joule Activation Sound
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC Joule Activation Sound
+  Guid:
+    Data1: -1547732203
+    Data2: 1188138302
+    Data3: -602038090
+    Data4: 369481137
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1315
 --- !u!114 &-3920766131462609860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,6 +488,9 @@ MonoBehaviour:
   - {fileID: 1442195303308199901}
   - {fileID: -3288822466681194051}
   - {fileID: -6789132000230769474}
+  - {fileID: -4407956873959372714}
+  - {fileID: -6617734173966727517}
+  - {fileID: 5403023839182114936}
   EditorParameters:
   - {fileID: 576468932334918762}
   - {fileID: 1296286425734807573}
@@ -444,7 +501,7 @@ MonoBehaviour:
   - {fileID: 2157952747921864828}
   StringsBanks:
   - {fileID: 963629068847726208}
-  cacheTime: 638528842147729649
+  cacheTime: 638529370993834442
   cacheVersion: 131609
 --- !u!114 &214953127663989741
 MonoBehaviour:
@@ -567,10 +624,10 @@ MonoBehaviour:
   Path: Joule fMod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638528842147729649
+  lastModified: 638529370993834442
   FileSizes:
   - Name: Desktop
-    Value: 2288
+    Value: 2454
   Exists: 1
 --- !u!114 &1145248355037478917
 MonoBehaviour:
@@ -794,10 +851,10 @@ MonoBehaviour:
   Path: Joule fMod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638528842147709650
+  lastModified: 638529370993792341
   FileSizes:
   - Name: Desktop
-    Value: 41856192
+    Value: 41859968
   Exists: 1
 --- !u!114 &3246718583781371487
 MonoBehaviour:
@@ -904,6 +961,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &5403023839182114936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC Microwave Activation Sound
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC Microwave Activation Sound
+  Guid:
+    Data1: 1432952271
+    Data2: 1162488981
+    Data3: -656878713
+    Data4: -1938471901
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 416
 --- !u!114 &5891691462138828877
 MonoBehaviour:
   m_ObjectHideFlags: 0
