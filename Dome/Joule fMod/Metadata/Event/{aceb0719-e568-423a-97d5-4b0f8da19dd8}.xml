@@ -69,7 +69,11 @@
 			<destination>{dc5354e1-23b0-487f-982c-72756b8dae4a}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{b01bc0d7-3f85-4f40-9194-e921c1bd3d16}" />
+	<object class="EventAutomatableProperties" id="{b01bc0d7-3f85-4f40-9194-e921c1bd3d16}">
+		<property name="minimumDistance">
+			<value>2.60000014</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{c2cc7a25-5e28-4a70-8b77-e8b5932f569e}" />
 	<object class="GroupTrack" id="{bf1424ed-a94d-4feb-909d-2ff96e81b1b6}">
 		<relationship name="automationTracks">
@@ -166,6 +170,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{96de2bc8-727c-4f82-9cdb-14cb60ee898e}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{4421319a-25aa-4e0c-9d16-6e72e761d1a7}</destination>
 		</relationship>
@@ -993,7 +1000,7 @@
 			<value>2</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>5</value>
 		</property>
 		<property name="curveShape">
 			<value>-0.304255188</value>
@@ -1004,7 +1011,7 @@
 			<value>0.99997916666666664</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-46.25</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{dc5e6ca1-2d1a-4d64-b017-9eed99259a9e}">
@@ -1012,7 +1019,7 @@
 			<value>3</value>
 		</property>
 		<property name="value">
-			<value>-2</value>
+			<value>5</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{2ab940d9-87b3-4916-9fed-548cf88452a8}">
@@ -1020,7 +1027,7 @@
 			<value>3</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>10</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{68dbeac6-9a71-41e9-ba7b-3d588d59f8ad}">
@@ -1028,7 +1035,7 @@
 			<value>2.2000000000000002</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-40</value>
 		</property>
 		<property name="curveShape">
 			<value>-0.467354983</value>

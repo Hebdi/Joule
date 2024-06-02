@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WindMonument.unity
     guid: 2546412c9cefef0419cb16bee95550a9
+  - enabled: 1
+    path: Assets/Scenes/Monument_Hall.unity
+    guid: 3fab7174fe36169419f2782c41d811f0
   - enabled: 0
     path: Assets/Scenes/Exploration_Scene.unity
     guid: 54df11c8d0cdec54db4737bc89105a56
