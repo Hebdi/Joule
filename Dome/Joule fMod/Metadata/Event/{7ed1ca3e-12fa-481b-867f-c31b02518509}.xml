@@ -140,7 +140,10 @@
 	</object>
 	<object class="SingleSound" id="{6595fddc-21c2-498d-a6b9-bda05590ffeb}">
 		<property name="length">
-			<value>235.00343749999999</value>
+			<value>232.12806825657896</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>2.8753692434210514</value>
 		</property>
 		<property name="pitch">
 			<value>-8</value>
@@ -187,7 +190,7 @@
 	</object>
 	<object class="LoopRegion" id="{ff6f7e15-02cb-4205-8087-f81850d04053}">
 		<property name="position">
-			<value>2.8753692434210514</value>
+			<value>0</value>
 		</property>
 		<property name="length">
 			<value>5.1246307565789486</value>
@@ -350,15 +353,15 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-8</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{6cadb206-b12d-4ad4-830c-0b912dcf9a00}">
 		<property name="position">
-			<value>0.051656920077972707</value>
+			<value>0.45000000000000001</value>
 		</property>
 		<property name="value">
-			<value>-12.3284588</value>
+			<value>-11</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{1f6462ca-715f-4a7a-a810-e8479713ad4a}">
