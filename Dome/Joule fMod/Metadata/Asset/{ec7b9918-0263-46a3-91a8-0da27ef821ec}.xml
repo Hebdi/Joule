@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{ec7b9918-0263-46a3-91a8-0da27ef821ec}">
+		<property name="assetPath">
+			<value>Energy Bar Refilling/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6fcd76b8-4654-4ebb-8fb6-a0f3465be687}</destination>
+		</relationship>
+	</object>
+</objects>

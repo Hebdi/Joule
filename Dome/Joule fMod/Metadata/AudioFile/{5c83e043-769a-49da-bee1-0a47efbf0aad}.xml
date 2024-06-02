@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5c83e043-769a-49da-bee1-0a47efbf0aad}">
+		<property name="assetPath">
+			<value>Energy Bar Refilling/Energy bar refilling_9.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.09375</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6fcd76b8-4654-4ebb-8fb6-a0f3465be687}</destination>
+		</relationship>
+	</object>
+</objects>
