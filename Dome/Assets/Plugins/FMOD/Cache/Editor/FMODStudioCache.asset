@@ -344,6 +344,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1315
+--- !u!114 &-3999627403031631255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music Master/Diner
+  m_EditorClassIdentifier: 
+  Name: Diner
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 772200129
+    data2: 2271696884
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-3920766131462609860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,11 +521,12 @@ MonoBehaviour:
   - {fileID: 1261663628713963533}
   - {fileID: -7634261934135191183}
   - {fileID: -2333774505804844869}
+  - {fileID: 3674044410679405646}
   MasterBanks:
   - {fileID: 2157952747921864828}
   StringsBanks:
   - {fileID: 963629068847726208}
-  cacheTime: 638529391162646885
+  cacheTime: 638529402227325656
   cacheVersion: 131609
 --- !u!114 &214953127663989741
 MonoBehaviour:
@@ -582,6 +607,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 5891691462138828877}
+  - {fileID: -3999627403031631255}
   MinDistance: 1
   MaxDistance: 20
   Length: 334285
@@ -624,10 +650,10 @@ MonoBehaviour:
   Path: Joule fMod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638529391162646885
+  lastModified: 638529402227325656
   FileSizes:
   - Name: Desktop
-    Value: 2454
+    Value: 2490
   Exists: 1
 --- !u!114 &1145248355037478917
 MonoBehaviour:
@@ -851,10 +877,10 @@ MonoBehaviour:
   Path: Joule fMod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638529391162611667
+  lastModified: 638529402227295610
   FileSizes:
   - Name: Desktop
-    Value: 41853600
+    Value: 41839264
   Exists: 1
 --- !u!114 &3246718583781371487
 MonoBehaviour:
@@ -910,6 +936,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 158905
+--- !u!114 &3674044410679405646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Diner
+  m_EditorClassIdentifier: 
+  Name: Diner
+  StudioPath: parameter:/Diner
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 772200129
+    data2: 2271696884
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &5160104778374817117
 MonoBehaviour:
   m_ObjectHideFlags: 0
