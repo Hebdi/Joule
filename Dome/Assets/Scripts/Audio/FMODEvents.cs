@@ -11,6 +11,9 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Battery SFX")]
     [field: SerializeField] public EventReference energyCollect { get; private set; }
 
+    [field: Header("Light SFX")]
+    [field: SerializeField] public EventReference lightOn { get; private set; }
+
     [field: Header("ambience")]
     [field: SerializeField] public EventReference ambience { get; private set; }
 
