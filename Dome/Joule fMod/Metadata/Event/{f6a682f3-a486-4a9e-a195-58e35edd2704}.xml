@@ -90,10 +90,12 @@
 	<object class="MixerBusPanner" id="{76afd20f-05b2-4038-a070-ad6cb89bfe98}" />
 	<object class="MultiSound" id="{b0c7813e-2701-48b0-8414-5d6b5c4ece11}">
 		<property name="length">
-			<value>1.875</value>
+			<value>0.9375</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{c6978c50-745d-4859-a1f1-bb187f5d8be0}</destination>
+		</relationship>
 		<relationship name="sounds">
-			<destination>{ca2edebf-ee5c-4864-b9d0-30d2c6a86308}</destination>
 			<destination>{e52a6ed3-ddbe-4ac4-bf45-a19fa2505e40}</destination>
 			<destination>{8019e223-91e2-4247-b97c-19ddaac0e9aa}</destination>
 			<destination>{1a718cbc-fd89-40b7-a543-0bceab670e88}</destination>
@@ -128,10 +130,13 @@
 	</object>
 	<object class="MixerBusPanner" id="{de70ca45-7686-4139-891d-95cb2fccaaba}" />
 	<object class="MixerBusFader" id="{e94ff1eb-dac6-479e-a488-650a602a81eb}" />
-	<object class="SingleSound" id="{ca2edebf-ee5c-4864-b9d0-30d2c6a86308}">
-		<relationship name="audioFile">
-			<destination>{42844b43-eccb-4ccb-8e0b-f181492eee57}</destination>
-		</relationship>
+	<object class="RandomizerModulator" id="{c6978c50-745d-4859-a1f1-bb187f5d8be0}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>startOffset</value>
+		</property>
+		<property name="amount">
+			<value>100</value>
+		</property>
 	</object>
 	<object class="SingleSound" id="{e52a6ed3-ddbe-4ac4-bf45-a19fa2505e40}">
 		<relationship name="audioFile">
@@ -154,6 +159,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{9b9a716b-739f-4016-b5d3-a5a8d22d2906}">
+		<property name="pitch">
+			<value>-2.20000005</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{b3bee766-1aa2-47b1-abaf-6f6a03877442}</destination>
 		</relationship>
@@ -164,6 +172,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{0fad5e19-5447-41a7-ac4e-97cd5025751d}">
+		<property name="pitch">
+			<value>-1.60000002</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{43acb2cf-93b1-4baf-895d-22df8c3774fd}</destination>
 		</relationship>
