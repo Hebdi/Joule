@@ -104,7 +104,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1875
+  Length: 937
 --- !u!114 &-6617734173966727517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 0
+  Default: 1
   ID:
     data1: 1025506734
     data2: 1448450716
@@ -501,7 +501,7 @@ MonoBehaviour:
   - {fileID: 2157952747921864828}
   StringsBanks:
   - {fileID: 963629068847726208}
-  cacheTime: 638529370993834442
+  cacheTime: 638529391162646885
   cacheVersion: 131609
 --- !u!114 &214953127663989741
 MonoBehaviour:
@@ -624,7 +624,7 @@ MonoBehaviour:
   Path: Joule fMod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638529370993834442
+  lastModified: 638529391162646885
   FileSizes:
   - Name: Desktop
     Value: 2454
@@ -851,10 +851,10 @@ MonoBehaviour:
   Path: Joule fMod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638529370993792341
+  lastModified: 638529391162611667
   FileSizes:
   - Name: Desktop
-    Value: 41859968
+    Value: 41853600
   Exists: 1
 --- !u!114 &3246718583781371487
 MonoBehaviour:
@@ -936,7 +936,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1875
+  Length: 750
 --- !u!114 &5196773070790540547
 MonoBehaviour:
   m_ObjectHideFlags: 0
