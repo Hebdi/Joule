@@ -44094,6 +44094,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110894765}
   m_Mesh: {fileID: 3399039805004210373, guid: 9293f8e4545db344eb00bfb27aad3aef, type: 3}
+--- !u!1 &1111098661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6712951019597819678, guid: 8b88226dd005d9c40ae0e6848d20b23e, type: 3}
+  m_PrefabInstance: {fileID: 3904224187443613422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1111098665
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111098661}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.27
+  m_Height: 1.0544244
+  m_Direction: 1
+  m_Center: {x: -0.8342466, y: -0.08657309, z: 0.00000046928702}
 --- !u!1 &1112363683
 GameObject:
   m_ObjectHideFlags: 0
@@ -44414,6 +44433,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a140f63d2ecad3b44a804a5bbf87f0e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <playerRollSound>k__BackingField:
+    Guid:
+      Data1: 2127678014
+      Data2: 1209733882
+      Data3: 465796998
+      Data4: 159731970
+    Path: event:/Player/Engine
   <energyCollect>k__BackingField:
     Guid:
       Data1: -1177919529
@@ -44421,6 +44447,20 @@ MonoBehaviour:
       Data3: -164095563
       Data4: 1523045938
     Path: event:/Other/Collecting Battery
+  <MonumentAwakeSound>k__BackingField:
+    Guid:
+      Data1: 920129926
+      Data2: 1290830760
+      Data3: 1147590329
+      Data4: -1686350313
+    Path: event:/Monument/Monument Steelbeams
+  <lightOn>k__BackingField:
+    Guid:
+      Data1: 660838091
+      Data2: 1096051336
+      Data3: -311187049
+      Data4: -1957168182
+    Path: event:/Monument/Monument - Lights on
   <ambience>k__BackingField:
     Guid:
       Data1: -1393883367
@@ -71410,6 +71450,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7722305038702236159, guid: 8b88226dd005d9c40ae0e6848d20b23e, type: 3}
   m_PrefabInstance: {fileID: 3904224187443613422}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1443541091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651670145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a63d7ff32dbfc44aad4dafa6065704f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grounded: 0
+  groundCheckDistance: 0.1
 --- !u!1 &1444522843
 GameObject:
   m_ObjectHideFlags: 0

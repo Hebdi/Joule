@@ -5,11 +5,14 @@ using FMODUnity;
 
 public class FMODEvents : MonoBehaviour
 {
-   //[field: Header("Player Roll SFX")]
-   //[field: SerializeField] public EventReference playerRollSound { get; private set; }
+   [field: Header("Player Roll SFX")]
+   [field: SerializeField] public EventReference playerRollSound { get; private set; }
 
     [field: Header("Battery SFX")]
     [field: SerializeField] public EventReference energyCollect { get; private set; }
+
+    [field: Header("Monument Activation SFX")]
+    [field: SerializeField] public EventReference MonumentAwakeSound { get; private set; }
 
     [field: Header("Light SFX")]
     [field: SerializeField] public EventReference lightOn { get; private set; }
