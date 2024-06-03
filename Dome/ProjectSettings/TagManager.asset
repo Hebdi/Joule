@@ -13,6 +13,7 @@ TagManager:
   - CinemachineTarget
   - CameraZone
   - MusicZone
+  - EndMusic
   layers:
   - Default
   - TransparentFX
