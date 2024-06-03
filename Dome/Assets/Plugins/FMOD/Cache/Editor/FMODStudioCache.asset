@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9088719407037974450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Monument/Monument - Lights on
+  m_EditorClassIdentifier: 
+  Path: event:/Monument/Monument - Lights on
+  Guid:
+    Data1: 660838091
+    Data2: 1096051336
+    Data3: -311187049
+    Data4: -1957168182
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8397288077631753406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,6 +54,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1601
+--- !u!114 &-8173839716817762028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC Microwave Activation Sound
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC Microwave Activation Sound
+  Guid:
+    Data1: 1432952271
+    Data2: 1162488981
+    Data3: -656878713
+    Data4: -1938471901
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 416
 --- !u!114 &-7634261934135191183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,6 +132,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6805626621252292535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Diner
+  m_EditorClassIdentifier: 
+  Name: Diner
+  StudioPath: parameter:/Diner
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 772200129
+    data2: 2271696884
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-6789132000230769474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,33 +183,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 937
---- !u!114 &-6617734173966727517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/NPC/NPC Computer Activation Sound
-  m_EditorClassIdentifier: 
-  Path: event:/NPC/NPC Computer Activation Sound
-  Guid:
-    Data1: 341586734
-    Data2: 1123033660
-    Data3: 396236445
-    Data4: 1917280759
-  Banks:
-  - {fileID: 2157952747921864828}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 837
 --- !u!114 &-6190308760424652072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +283,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 5196773070790540547}
-  - {fileID: -3683013961930129091}
+  - {fileID: 1852015358945092789}
   MinDistance: 1
   MaxDistance: 20
   Length: 18500
@@ -318,57 +369,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 232128
---- !u!114 &-4407956873959372714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/NPC/NPC Joule Activation Sound
-  m_EditorClassIdentifier: 
-  Path: event:/NPC/NPC Joule Activation Sound
-  Guid:
-    Data1: -1547732203
-    Data2: 1188138302
-    Data3: -602038090
-    Data4: 369481137
-  Banks:
-  - {fileID: 2157952747921864828}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1315
---- !u!114 &-3999627403031631255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music Master/Diner
-  m_EditorClassIdentifier: 
-  Name: Diner
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 772200129
-    data2: 2271696884
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
 --- !u!114 &-3920766131462609860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,30 +391,6 @@ MonoBehaviour:
     data2: 3252502149
   Type: 0
   IsGlobal: 1
-  Labels: []
-  Exists: 1
---- !u!114 &-3683013961930129091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Terrains/Speed
-  m_EditorClassIdentifier: 
-  Name: Speed
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 1025506734
-    data2: 1448450716
-  Type: 0
-  IsGlobal: 0
   Labels: []
   Exists: 1
 --- !u!114 &-3288822466681194051
@@ -495,33 +471,6 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &-1418270993968406937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Monument/Monument - Lights on
-  m_EditorClassIdentifier: 
-  Path: event:/Monument/Monument - Lights on
-  Guid:
-    Data1: 660838091
-    Data2: 1096051336
-    Data3: -311187049
-    Data4: -1957168182
-  Banks:
-  - {fileID: 2157952747921864828}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,22 +513,24 @@ MonoBehaviour:
   - {fileID: 1442195303308199901}
   - {fileID: -3288822466681194051}
   - {fileID: -6789132000230769474}
-  - {fileID: -4407956873959372714}
-  - {fileID: -6617734173966727517}
-  - {fileID: 5403023839182114936}
-  - {fileID: -1418270993968406937}
+  - {fileID: 3952173294069669393}
+  - {fileID: 3994623270666986110}
+  - {fileID: 1158461941396900861}
+  - {fileID: -9088719407037974450}
+  - {fileID: -8173839716817762028}
+  - {fileID: 722664047094099166}
   EditorParameters:
   - {fileID: 576468932334918762}
   - {fileID: 1296286425734807573}
   - {fileID: 1261663628713963533}
   - {fileID: -7634261934135191183}
   - {fileID: -2333774505804844869}
-  - {fileID: 3674044410679405646}
+  - {fileID: -6805626621252292535}
   MasterBanks:
   - {fileID: 2157952747921864828}
   StringsBanks:
   - {fileID: 963629068847726208}
-  cacheTime: 638529427475938256
+  cacheTime: 638530124663611213
   cacheVersion: 131609
 --- !u!114 &214953127663989741
 MonoBehaviour:
@@ -660,7 +611,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 5891691462138828877}
-  - {fileID: -3999627403031631255}
+  - {fileID: 4688996587539127491}
   MinDistance: 1
   MaxDistance: 20
   Length: 334285
@@ -688,6 +639,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &722664047094099166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Monument/Monument Talk Short
+  m_EditorClassIdentifier: 
+  Path: event:/Monument/Monument Talk Short
+  Guid:
+    Data1: -789436428
+    Data2: 1076071132
+    Data3: -2117196102
+    Data4: 2011687488
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3125
 --- !u!114 &963629068847726208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -703,10 +681,10 @@ MonoBehaviour:
   Path: Joule fMod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638529427475938256
+  lastModified: 638530124663611213
   FileSizes:
   - Name: Desktop
-    Value: 2532
+    Value: 2622
   Exists: 1
 --- !u!114 &1145248355037478917
 MonoBehaviour:
@@ -730,6 +708,33 @@ MonoBehaviour:
   - {fileID: 2157952747921864828}
   IsStream: 0
   Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1158461941396900861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Other/Sliding Door
+  m_EditorClassIdentifier: 
+  Path: event:/Other/Sliding Door
+  Guid:
+    Data1: 689664401
+    Data2: 1192613883
+    Data3: 403317406
+    Data4: 1596452779
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -836,7 +841,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 289625
+  Length: 3125
 --- !u!114 &1444423805901647569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -859,6 +864,30 @@ MonoBehaviour:
     data2: 2167799725
   Type: 0
   IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &1852015358945092789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Terrains/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1025506734
+    data2: 1448450716
+  Type: 0
+  IsGlobal: 0
   Labels: []
   Exists: 1
 --- !u!114 &2142641690004289411
@@ -930,10 +959,10 @@ MonoBehaviour:
   Path: Joule fMod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638529427475903098
+  lastModified: 638530124663591214
   FileSizes:
   - Name: Desktop
-    Value: 41973312
+    Value: 40736608
   Exists: 1
 --- !u!114 &3246718583781371487
 MonoBehaviour:
@@ -989,7 +1018,61 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 158905
---- !u!114 &3674044410679405646
+--- !u!114 &3952173294069669393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC Joule Activation Sound
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC Joule Activation Sound
+  Guid:
+    Data1: -1547732203
+    Data2: 1188138302
+    Data3: -602038090
+    Data4: 369481137
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1315
+--- !u!114 &3994623270666986110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC Computer Activation Sound
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC Computer Activation Sound
+  Guid:
+    Data1: 341586734
+    Data2: 1123033660
+    Data3: 396236445
+    Data4: 1917280759
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 837
+--- !u!114 &4688996587539127491
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -999,10 +1082,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Diner
+  m_Name: parameter:/Music Master/Diner
   m_EditorClassIdentifier: 
   Name: Diner
-  StudioPath: parameter:/Diner
+  StudioPath: 
   Min: 0
   Max: 1
   Default: 0
@@ -1064,33 +1147,6 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &5403023839182114936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/NPC/NPC Microwave Activation Sound
-  m_EditorClassIdentifier: 
-  Path: event:/NPC/NPC Microwave Activation Sound
-  Guid:
-    Data1: 1432952271
-    Data2: 1162488981
-    Data3: -656878713
-    Data4: -1938471901
-  Banks:
-  - {fileID: 2157952747921864828}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 416
 --- !u!114 &5891691462138828877
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1833,12 +1833,12 @@ GameObject:
   - component: {fileID: 114869883762003796}
   - component: {fileID: 114976572138177136}
   m_Layer: 5
-  m_Name: Portrait Name
+  m_Name: Portrait Name (Auf TRANSPARENT)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &224857961235629578
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1880,7 +1880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4390,7 +4390,7 @@ GameObject:
   - component: {fileID: 108448918672811280}
   - component: {fileID: 4785857168113253370}
   m_Layer: 5
-  m_Name: Portrait Name
+  m_Name: Portrait Name (auf TRANSPARENT)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4437,7 +4437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
