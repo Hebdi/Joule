@@ -401,7 +401,6 @@ GameObject:
   m_Component:
   - component: {fileID: 136558108}
   - component: {fileID: 136558107}
-  - component: {fileID: 136558109}
   m_Layer: 0
   m_Name: CameraPivot
   m_TagString: Untagged
@@ -441,102 +440,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!82 &136558109
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136558106}
-  m_Enabled: 0
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f07e40eb41432a149bf2c96c9dacc88a, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.7
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 5.12146
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &141456598
 GameObject:
   m_ObjectHideFlags: 0
@@ -3254,7 +3157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &786836296
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4655,7 +4558,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0.040653262, y: -0, z: -0, w: 0.9991734}
-  m_LocalPosition: {x: -36.974537, y: 0.28816378, z: -1.5099196}
+  m_LocalPosition: {x: -41.933994, y: 0.28816378, z: -11.060449}
   m_LocalScale: {x: 0.4091921, y: 0.53836805, z: 0.4122676}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4818,11 +4721,11 @@ MonoBehaviour:
   CollisionTag: MusicZone
   EventReference:
     Guid:
-      Data1: 2064176704
-      Data2: 1120960697
-      Data3: -1213210214
-      Data4: -1351360385
-    Path: event:/Music/Music Master
+      Data1: 695069204
+      Data2: 1137862857
+      Data3: 930880391
+      Data4: -1921155024
+    Path: event:/Music/Music_Enhanced
   Event: 
   PlayEvent: 1
   StopEvent: 3
@@ -4849,11 +4752,11 @@ MonoBehaviour:
   CollisionTag: MusicZone
   EventReference:
     Guid:
-      Data1: -1393883367
-      Data2: 1111156072
-      Data3: 256628119
-      Data4: -660758131
-    Path: event:/Environment
+      Data1: 920129926
+      Data2: 1290830760
+      Data3: 1147590329
+      Data4: -1686350313
+    Path: event:/Monument/Monument Steelbeams
   Event: 
   PlayEvent: 1
   StopEvent: 3
@@ -4862,9 +4765,9 @@ MonoBehaviour:
   Preload: 0
   AllowNonRigidbodyDoppler: 0
   Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 2.6000001
-  OverrideMaxDistance: 20
+  OverrideAttenuation: 1
+  OverrideMinDistance: 6.52
+  OverrideMaxDistance: 21.117737
 --- !u!1001 &978970277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6903,8 +6806,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325287686}
-  m_LocalRotation: {x: -0.12574796, y: 0.43665978, z: 0.061789352, w: 0.8886494}
-  m_LocalPosition: {x: -43.690044, y: 0.06999981, z: -6.640005}
+  m_LocalRotation: {x: -0.1251101, y: 0.4457196, z: 0.06307148, w: 0.88414}
+  m_LocalPosition: {x: -48.803146, y: 0.06999981, z: -16.051672}
   m_LocalScale: {x: 0.40919212, y: 0.54345727, z: 0.40933225}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6961,7 +6864,7 @@ GameObject:
   - component: {fileID: 1355742492}
   m_Layer: 0
   m_Name: Light_trigger (7)
-  m_TagString: NPC
+  m_TagString: MusicZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2
@@ -7248,7 +7151,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8647,7 +8550,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665812076}
   m_LocalRotation: {x: -0, y: 0.99755305, z: -0, w: 0.0699143}
-  m_LocalPosition: {x: -4484.959, y: 14, z: -2720.816}
+  m_LocalPosition: {x: -4381.46, y: 29.8, z: -912.76}
   m_LocalScale: {x: 7, y: 7, z: 7}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10408,7 +10311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069531320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4389.79, y: 29.67, z: -923.23}
+  m_LocalPosition: {x: -4377.67, y: 29.67, z: -899.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11023,7 +10926,7 @@ GameObject:
   - component: {fileID: 3469287837399777783}
   - component: {fileID: 1711813855754908989}
   - component: {fileID: 1068190162}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WindMonument_Inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11635,6 +11538,7 @@ GameObject:
   - component: {fileID: 5021712700570284260}
   - component: {fileID: 7979986103637193898}
   - component: {fileID: 5355418653962301816}
+  - component: {fileID: 7979986103637193899}
   m_Layer: 0
   m_Name: MonumentAI
   m_TagString: Untagged
@@ -12032,9 +11936,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1758503998}
     - target: {fileID: 6712951020556968689, guid: 8b88226dd005d9c40ae0e6848d20b23e, type: 3}
+      propertyPath: energyUse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6712951020556968689, guid: 8b88226dd005d9c40ae0e6848d20b23e, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1708822291}
+    - target: {fileID: 6712951020556968689, guid: 8b88226dd005d9c40ae0e6848d20b23e, type: 3}
+      propertyPath: maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 6712951020556968689, guid: 8b88226dd005d9c40ae0e6848d20b23e, type: 3}
       propertyPath: pickupEffect
       value: 
@@ -12069,7 +11981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7722305038702236159, guid: 8b88226dd005d9c40ae0e6848d20b23e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4389.79
+      value: -4377.67
       objectReference: {fileID: 0}
     - target: {fileID: 7722305038702236159, guid: 8b88226dd005d9c40ae0e6848d20b23e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12077,11 +11989,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7722305038702236159, guid: 8b88226dd005d9c40ae0e6848d20b23e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -929.23
+      value: -905.89
       objectReference: {fileID: 0}
     - target: {fileID: 7722305038702236159, guid: 8b88226dd005d9c40ae0e6848d20b23e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98067385
+      value: 0.978623
       objectReference: {fileID: 0}
     - target: {fileID: 7722305038702236159, guid: 8b88226dd005d9c40ae0e6848d20b23e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -12089,7 +12001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7722305038702236159, guid: 8b88226dd005d9c40ae0e6848d20b23e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.19564989
+      value: 0.20566265
       objectReference: {fileID: 0}
     - target: {fileID: 7722305038702236159, guid: 8b88226dd005d9c40ae0e6848d20b23e, type: 3}
       propertyPath: m_LocalRotation.z
@@ -12101,7 +12013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7722305038702236159, guid: 8b88226dd005d9c40ae0e6848d20b23e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 22.565
+      value: 23.737
       objectReference: {fileID: 0}
     - target: {fileID: 7722305038702236159, guid: 8b88226dd005d9c40ae0e6848d20b23e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -12709,6 +12621,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2288655299888481817}
+  m_Mesh: {fileID: -1918388490283683169, guid: cf246a97f0200934b9e4283be18e9fc2, type: 3}
+--- !u!64 &7979986103637193899
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2288655299888481817}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -1918388490283683169, guid: cf246a97f0200934b9e4283be18e9fc2, type: 3}
 --- !u!33 &8001758854536161560
 MeshFilter:
