@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{296dea14-68c9-43d2-871b-7c3730807d8d}">
 		<property name="name">
-			<value>Music_Enhanced</value>
+			<value>Music_Enhanced 1</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -167,9 +167,6 @@
 		</property>
 		<relationship name="sounds">
 			<destination>{7a488032-e61c-4857-a147-920093a42fbc}</destination>
-			<destination>{1abbb28a-bdfe-4c72-bfd1-caf33e3d7e81}</destination>
-			<destination>{c19f9126-7994-4707-a7f6-816013aeeff9}</destination>
-			<destination>{9a1e0fc9-3f9a-44bd-956e-908775bf279f}</destination>
 		</relationship>
 	</object>
 	<object class="TransitionSourceSound" id="{5af649e0-7bd0-42e3-bb7f-d4e52d29723f}">
@@ -300,21 +297,6 @@
 	<object class="SingleSound" id="{7a488032-e61c-4857-a147-920093a42fbc}">
 		<relationship name="audioFile">
 			<destination>{bd61855a-0094-494c-a0aa-852f5b049ab1}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{1abbb28a-bdfe-4c72-bfd1-caf33e3d7e81}">
-		<relationship name="audioFile">
-			<destination>{af1182ad-b11f-4f15-ab0c-fa46ab6c54e1}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{c19f9126-7994-4707-a7f6-816013aeeff9}">
-		<relationship name="audioFile">
-			<destination>{2d9c5162-4372-4367-8c0f-981c569d30cd}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{9a1e0fc9-3f9a-44bd-956e-908775bf279f}">
-		<relationship name="audioFile">
-			<destination>{e6bd8044-6cc3-4e6f-b4de-f3b4fb3bbcdb}</destination>
 		</relationship>
 	</object>
 	<object class="TransitionSourceFadeOutCurve" id="{e7ba95b1-dc4a-4d2b-afe2-fd155c546f79}">

@@ -54,6 +54,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1601
+--- !u!114 &-8278162161775738650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music Master 4/Diner
+  m_EditorClassIdentifier: 
+  Name: Diner
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 772200129
+    data2: 2271696884
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-8173839716817762028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,6 +105,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 416
+--- !u!114 &-8064694951799976514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music Master 1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music Master 1
+  Guid:
+    Data1: 902558492
+    Data2: 1276153179
+    Data3: 722975909
+    Data4: -821531292
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4009196058393301274}
+  - {fileID: 8562676888118685881}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 334285
 --- !u!114 &-7634261934135191183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,30 +185,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-7314819757584164811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music_Enhanced/Interesting moment
-  m_EditorClassIdentifier: 
-  Name: Interesting moment
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 2558970843
-    data2: 2454028530
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
 --- !u!114 &-6805626621252292535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +236,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 937
+--- !u!114 &-6338898090720485566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Monument/Monument Activate
+  m_EditorClassIdentifier: 
+  Path: event:/Monument/Monument Activate
+  Guid:
+    Data1: 817284356
+    Data2: 1254081297
+    Data3: -484047189
+    Data4: -980912894
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3125
 --- !u!114 &-6190308760424652072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,6 +338,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 160000
+--- !u!114 &-5709158510286857256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Enhanced 4/Diner
+  m_EditorClassIdentifier: 
+  Name: Diner
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 772200129
+    data2: 2271696884
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-5654620104380533221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +391,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 18500
---- !u!114 &-5558798828025170941
+--- !u!114 &-5624981431970901263
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,16 +401,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music_Enhanced/Diner
+  m_Name: parameter:/Music Master 2/Interesting moment
   m_EditorClassIdentifier: 
-  Name: Diner
+  Name: Interesting moment
   StudioPath: 
   Min: 0
   Max: 1
   Default: 0
   ID:
-    data1: 772200129
-    data2: 2271696884
+    data1: 2558970843
+    data2: 2454028530
   Type: 0
   IsGlobal: 1
   Labels: []
@@ -389,6 +469,88 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 625
+--- !u!114 &-5037728874139182743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music Master 4
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music Master 4
+  Guid:
+    Data1: -353337975
+    Data2: 1226946284
+    Data3: 1525588101
+    Data4: 432230513
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 32823179192463966}
+  - {fileID: -8278162161775738650}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 334285
+--- !u!114 &-5026111051400748123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music Master 3/Interesting moment
+  m_EditorClassIdentifier: 
+  Name: Interesting moment
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2558970843
+    data2: 2454028530
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-4695162568567651001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Enhanced 1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Enhanced 1
+  Guid:
+    Data1: 695069204
+    Data2: 1137862857
+    Data3: 930880391
+    Data4: -1921155024
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8986161122683198215}
+  - {fileID: 5898629955673604695}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 334285
 --- !u!114 &-4477522129771295425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,6 +657,83 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2950140851774929461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Enhanced 3/Diner
+  m_EditorClassIdentifier: 
+  Name: Diner
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 772200129
+    data2: 2271696884
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-2857889883060181766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music Master 3/Diner
+  m_EditorClassIdentifier: 
+  Name: Diner
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 772200129
+    data2: 2271696884
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-2680748462105142826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music Master 3
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music Master 3
+  Guid:
+    Data1: 2118204063
+    Data2: 1096196069
+    Data3: -1038281076
+    Data4: 1432651227
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5026111051400748123}
+  - {fileID: -2857889883060181766}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 334285
 --- !u!114 &-2536941535375758086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,35 +761,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-2485283296930087986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Music_Enhanced
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Music_Enhanced
-  Guid:
-    Data1: 695069204
-    Data2: 1137862857
-    Data3: 930880391
-    Data4: -1921155024
-  Banks:
-  - {fileID: 2157952747921864828}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -5558798828025170941}
-  - {fileID: -7314819757584164811}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 334285
 --- !u!114 &-2333774505804844869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,6 +781,54 @@ MonoBehaviour:
   ID:
     data1: 3315495322
     data2: 3966483321
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-944961149970558474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Enhanced 2/Diner
+  m_EditorClassIdentifier: 
+  Name: Diner
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 772200129
+    data2: 2271696884
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-52738340159680209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Enhanced 4/Interesting moment
+  m_EditorClassIdentifier: 
+  Name: Interesting moment
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2558970843
+    data2: 2454028530
   Type: 0
   IsGlobal: 1
   Labels: []
@@ -623,7 +881,15 @@ MonoBehaviour:
   - {fileID: -8173839716817762028}
   - {fileID: -2536941535375758086}
   - {fileID: 6214048843440871956}
-  - {fileID: -2485283296930087986}
+  - {fileID: 1800301227849322901}
+  - {fileID: 6359521901436117634}
+  - {fileID: 2075304270344006566}
+  - {fileID: -4695162568567651001}
+  - {fileID: -8064694951799976514}
+  - {fileID: -5037728874139182743}
+  - {fileID: -2680748462105142826}
+  - {fileID: 4669926893962539307}
+  - {fileID: -6338898090720485566}
   EditorParameters:
   - {fileID: 576468932334918762}
   - {fileID: 1296286425734807573}
@@ -635,8 +901,32 @@ MonoBehaviour:
   - {fileID: 2157952747921864828}
   StringsBanks:
   - {fileID: 963629068847726208}
-  cacheTime: 638530316334846496
+  cacheTime: 638530403960757203
   cacheVersion: 131609
+--- !u!114 &32823179192463966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music Master 4/Interesting moment
+  m_EditorClassIdentifier: 
+  Name: Interesting moment
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2558970843
+    data2: 2454028530
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &214953127663989741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,7 +1026,7 @@ MonoBehaviour:
   StudioPath: parameter:/Interesting moment
   Min: 0
   Max: 1
-  Default: 1
+  Default: 0
   ID:
     data1: 2558970843
     data2: 2454028530
@@ -759,10 +1049,10 @@ MonoBehaviour:
   Path: Joule fMod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638530316334846496
+  lastModified: 638530403960757203
   FileSizes:
   - Name: Desktop
-    Value: 2674
+    Value: 2976
   Exists: 1
 --- !u!114 &1145248355037478917
 MonoBehaviour:
@@ -791,6 +1081,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1178836345946419246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Enhanced 2/Interesting moment
+  m_EditorClassIdentifier: 
+  Name: Interesting moment
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2558970843
+    data2: 2454028530
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &1229912991176011029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,6 +1231,35 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &1800301227849322901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music Master 2
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music Master 2
+  Guid:
+    Data1: -784407033
+    Data2: 1209838237
+    Data3: 765805733
+    Data4: 1307984610
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3920598968233025792}
+  - {fileID: -5624981431970901263}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 334285
 --- !u!114 &1852015358945092789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -941,6 +1284,35 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2075304270344006566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Enhanced 2
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Enhanced 2
+  Guid:
+    Data1: 1863291661
+    Data2: 1180969236
+    Data3: -1395315070
+    Data4: 1844024441
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -944961149970558474}
+  - {fileID: 1178836345946419246}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 334285
 --- !u!114 &2142641690004289411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,10 +1382,10 @@ MonoBehaviour:
   Path: Joule fMod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638530316334816478
+  lastModified: 638530403960707203
   FileSizes:
   - Name: Desktop
-    Value: 40740576
+    Value: 40764768
   Exists: 1
 --- !u!114 &3246718583781371487
 MonoBehaviour:
@@ -1069,6 +1441,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 158905
+--- !u!114 &3920598968233025792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music Master 2/Diner
+  m_EditorClassIdentifier: 
+  Name: Diner
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 772200129
+    data2: 2271696884
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &3952173294069669393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,6 +1519,59 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 837
+--- !u!114 &4009196058393301274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music Master 1/Diner
+  m_EditorClassIdentifier: 
+  Name: Diner
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 772200129
+    data2: 2271696884
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &4669926893962539307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Enhanced 3
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Enhanced 3
+  Guid:
+    Data1: -25817127
+    Data2: 1311315256
+    Data3: -812287055
+    Data4: 1087424863
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5882084515053545316}
+  - {fileID: -2950140851774929461}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 334285
 --- !u!114 &4688996587539127491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,6 +1647,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &5882084515053545316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Enhanced 3/Interesting moment
+  m_EditorClassIdentifier: 
+  Name: Interesting moment
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2558970843
+    data2: 2454028530
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &5891691462138828877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1214,7 +1687,31 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 1
+  Default: 0
+  ID:
+    data1: 2558970843
+    data2: 2454028530
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &5898629955673604695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Enhanced 1/Interesting moment
+  m_EditorClassIdentifier: 
+  Name: Interesting moment
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
   ID:
     data1: 2558970843
     data2: 2454028530
@@ -1249,6 +1746,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3125
+--- !u!114 &6359521901436117634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Enhanced 4
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Enhanced 4
+  Guid:
+    Data1: 901825291
+    Data2: 1301306334
+    Data3: -1835450954
+    Data4: -1371069526
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5709158510286857256}
+  - {fileID: -52738340159680209}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 334285
 --- !u!114 &6513697716912773937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1387,3 +1913,51 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 160000
+--- !u!114 &8562676888118685881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music Master 1/Interesting moment
+  m_EditorClassIdentifier: 
+  Name: Interesting moment
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2558970843
+    data2: 2454028530
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &8986161122683198215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Enhanced 1/Diner
+  m_EditorClassIdentifier: 
+  Name: Diner
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 772200129
+    data2: 2271696884
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
