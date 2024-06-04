@@ -839,6 +839,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-1677890199950095407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Other/Cutscene
+  m_EditorClassIdentifier: 
+  Path: event:/Other/Cutscene
+  Guid:
+    Data1: 56810706
+    Data2: 1249209046
+    Data3: -1510723931
+    Data4: 1196078033
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-944961149970558474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -945,6 +972,7 @@ MonoBehaviour:
   - {fileID: 4669926893962539307}
   - {fileID: -6338898090720485566}
   - {fileID: -6077590108367538316}
+  - {fileID: -1677890199950095407}
   EditorParameters:
   - {fileID: 576468932334918762}
   - {fileID: 1296286425734807573}
@@ -956,7 +984,7 @@ MonoBehaviour:
   - {fileID: 2157952747921864828}
   StringsBanks:
   - {fileID: 963629068847726208}
-  cacheTime: 638530498550935772
+  cacheTime: 638531057541447645
   cacheVersion: 131609
 --- !u!114 &32823179192463966
 MonoBehaviour:
@@ -1104,10 +1132,10 @@ MonoBehaviour:
   Path: Joule fMod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638530498550935772
+  lastModified: 638531057541447645
   FileSizes:
   - Name: Desktop
-    Value: 3018
+    Value: 3068
   Exists: 1
 --- !u!114 &1145248355037478917
 MonoBehaviour:
@@ -1437,10 +1465,10 @@ MonoBehaviour:
   Path: Joule fMod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638530498550885718
+  lastModified: 638531057541401599
   FileSizes:
   - Name: Desktop
-    Value: 40766816
+    Value: 41448160
   Exists: 1
 --- !u!114 &3246718583781371487
 MonoBehaviour:

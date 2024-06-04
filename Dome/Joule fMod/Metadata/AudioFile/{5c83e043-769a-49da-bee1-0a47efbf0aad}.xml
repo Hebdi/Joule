@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{5c83e043-769a-49da-bee1-0a47efbf0aad}">
 		<property name="assetPath">
-			<value>Energy Bar Refilling/Energy bar refilling_9.wav</value>
+			<value>Energy bar refilling_9.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
