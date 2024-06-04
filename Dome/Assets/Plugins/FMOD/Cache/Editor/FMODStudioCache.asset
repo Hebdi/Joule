@@ -973,6 +973,7 @@ MonoBehaviour:
   - {fileID: -6338898090720485566}
   - {fileID: -6077590108367538316}
   - {fileID: -1677890199950095407}
+  - {fileID: 5776815624747163771}
   EditorParameters:
   - {fileID: 576468932334918762}
   - {fileID: 1296286425734807573}
@@ -984,7 +985,7 @@ MonoBehaviour:
   - {fileID: 2157952747921864828}
   StringsBanks:
   - {fileID: 963629068847726208}
-  cacheTime: 638531057541447645
+  cacheTime: 638531283021680515
   cacheVersion: 131609
 --- !u!114 &32823179192463966
 MonoBehaviour:
@@ -1132,10 +1133,10 @@ MonoBehaviour:
   Path: Joule fMod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638531057541447645
+  lastModified: 638531283021680515
   FileSizes:
   - Name: Desktop
-    Value: 3068
+    Value: 3112
   Exists: 1
 --- !u!114 &1145248355037478917
 MonoBehaviour:
@@ -1465,10 +1466,10 @@ MonoBehaviour:
   Path: Joule fMod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638531057541401599
+  lastModified: 638531283021641470
   FileSizes:
   - Name: Desktop
-    Value: 41448160
+    Value: 41453664
   Exists: 1
 --- !u!114 &3246718583781371487
 MonoBehaviour:
@@ -1730,6 +1731,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &5776815624747163771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment 2
+  m_EditorClassIdentifier: 
+  Path: event:/Environment 2
+  Guid:
+    Data1: 679276555
+    Data2: 1198726557
+    Data3: 222518160
+    Data4: 369594350
+  Banks:
+  - {fileID: 2157952747921864828}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 2.6000001
+  MaxDistance: 20
+  Length: 10000
 --- !u!114 &5882084515053545316
 MonoBehaviour:
   m_ObjectHideFlags: 0
