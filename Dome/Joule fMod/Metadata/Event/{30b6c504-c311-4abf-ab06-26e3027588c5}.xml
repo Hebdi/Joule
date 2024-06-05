@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{f3108576-d109-47cb-9a3d-904caa8d3383}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{a1ce3d96-16d4-46ca-b88d-e97fed1d8c8f}</destination>
 		</relationship>
@@ -97,6 +100,9 @@
 		</property>
 		<relationship name="modulators">
 			<destination>{15b0c7bd-907e-4f23-af75-2c583cf092c9}</destination>
+		</relationship>
+		<relationship name="fadeOutCurve">
+			<destination>{66f8ba52-4d8e-4268-9ed7-c5fd4b1acad8}</destination>
 		</relationship>
 		<relationship name="sounds">
 			<destination>{dc7f9968-2453-45b6-8066-d22ba2cf80c2}</destination>
@@ -136,6 +142,14 @@
 			<value>100</value>
 		</property>
 	</object>
+	<object class="FadeCurve" id="{66f8ba52-4d8e-4268-9ed7-c5fd4b1acad8}">
+		<relationship name="startPoint">
+			<destination>{63d43429-a3d9-49ee-8ec2-af756c149ea0}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{5cff7f58-b710-447c-92fe-dc1bdbac561f}</destination>
+		</relationship>
+	</object>
 	<object class="SingleSound" id="{dc7f9968-2453-45b6-8066-d22ba2cf80c2}">
 		<property name="pitch">
 			<value>0.300000012</value>
@@ -153,20 +167,39 @@
 	<object class="MixerBusPanner" id="{d8d96fd2-acf1-48b4-b081-f611a9e62dd0}" />
 	<object class="SFXReverbEffect" id="{b9941f80-b63f-41a7-aa38-f6a7159ff3cf}">
 		<property name="decayTime">
-			<value>6500</value>
+			<value>4600</value>
 		</property>
 		<property name="highCut">
 			<value>1300</value>
 		</property>
 		<property name="wetLevel">
-			<value>-6.5</value>
+			<value>-20</value>
 		</property>
 		<property name="dryLevel">
-			<value>-23</value>
+			<value>-24</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{aabe307e-6b91-4689-aa29-9323fef6875e}" />
 	<object class="SpatialiserEffect" id="{c85f1c1d-1bff-4399-81a9-bae49956edcc}" />
+	<object class="AutomationPoint" id="{63d43429-a3d9-49ee-8ec2-af756c149ea0}">
+		<property name="position">
+			<value>2.9000000000000004</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>0.25471893</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{5cff7f58-b710-447c-92fe-dc1bdbac561f}">
+		<property name="position">
+			<value>3.125</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{c9dedeb3-7962-49c6-8f71-81f54e75df2b}" />
 	<object class="ThreeEQEffect" id="{efa404ec-5479-4112-817e-1a7c14c97a52}">
 		<property name="highGain">

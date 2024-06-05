@@ -14,6 +14,10 @@ TagManager:
   - CameraZone
   - MusicZone
   - EndMusic
+  - Concrete
+  - Sand1
+  - Sand2
+  - Monument
   layers:
   - Default
   - TransparentFX

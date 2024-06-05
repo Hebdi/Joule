@@ -444,7 +444,7 @@ MonoBehaviour:
   - {fileID: 1852015358945092789}
   MinDistance: 1
   MaxDistance: 20
-  Length: 18500
+  Length: 232128
 --- !u!114 &-5624981431970901263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -977,15 +977,15 @@ MonoBehaviour:
   EditorParameters:
   - {fileID: 576468932334918762}
   - {fileID: 1296286425734807573}
-  - {fileID: 1261663628713963533}
   - {fileID: -7634261934135191183}
   - {fileID: -2333774505804844869}
   - {fileID: -6805626621252292535}
+  - {fileID: 8180530563467324595}
   MasterBanks:
   - {fileID: 2157952747921864828}
   StringsBanks:
   - {fileID: 963629068847726208}
-  cacheTime: 638531283021680515
+  cacheTime: 638531985905637864
   cacheVersion: 131609
 --- !u!114 &32823179192463966
 MonoBehaviour:
@@ -1133,10 +1133,10 @@ MonoBehaviour:
   Path: Joule fMod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638531283021680515
+  lastModified: 638531985905637864
   FileSizes:
   - Name: Desktop
-    Value: 3112
+    Value: 3110
   Exists: 1
 --- !u!114 &1145248355037478917
 MonoBehaviour:
@@ -1216,30 +1216,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3112
---- !u!114 &1261663628713963533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Terrain type
-  m_EditorClassIdentifier: 
-  Name: Terrain type
-  StudioPath: parameter:/Terrain type
-  Min: 1
-  Max: 4
-  Default: 1
-  ID:
-    data1: 2584700209
-    data2: 659422711
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
 --- !u!114 &1296286425734807573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1466,10 +1442,10 @@ MonoBehaviour:
   Path: Joule fMod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638531283021641470
+  lastModified: 638531985905602218
   FileSizes:
   - Name: Desktop
-    Value: 41453664
+    Value: 41453408
   Exists: 1
 --- !u!114 &3246718583781371487
 MonoBehaviour:
@@ -1717,9 +1693,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Terrains/Terrain type
+  m_Name: parameter:/Terrains/TerrainType
   m_EditorClassIdentifier: 
-  Name: Terrain type
+  Name: TerrainType
   StudioPath: 
   Min: 1
   Max: 4
@@ -2072,6 +2048,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 160000
+--- !u!114 &8180530563467324595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TerrainType
+  m_EditorClassIdentifier: 
+  Name: TerrainType
+  StudioPath: parameter:/TerrainType
+  Min: 1
+  Max: 4
+  Default: 1
+  ID:
+    data1: 2584700209
+    data2: 659422711
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &8562676888118685881
 MonoBehaviour:
   m_ObjectHideFlags: 0

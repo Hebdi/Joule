@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
+using FMOD.Studio;
 
 public class Sphere_Controller : MonoBehaviour
 {
@@ -18,12 +19,27 @@ public class Sphere_Controller : MonoBehaviour
     [SerializeField] private EventReference upgradeSound;
     //[SerializeField] private EventReference playerRollSound;
 
+    //Engine Sounds
+    //FMOD.Studio.EventInstance RollEngine;
+    //FMOD.Studio.ParameterInstance Speed;
+
+
+    void Awake ()
+    {
+        //Engine Sounds
+      //  RollEngine = FMODUnity.RuntimeManager.CreateInstance("event:/Player/Engine");
+      //  RollEngine.getParameter ("Speed", out speed);
+    }
 
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        //Engine Sounds
+      //  FMODUnity.RuntimeManager.AttacheInstanceToGameObject(RollEngine, GetComponent<Transform>(), GetComponent<Rigidbody>());
+      //  RollEngine.start();
     }
 
     void Update()
@@ -59,7 +75,10 @@ public class Sphere_Controller : MonoBehaviour
             {
                 rb.AddRelativeForce(-(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * 10));
             //dustTrail.SetActive(true);
-          // AudioManager.instance.PlayOneShot(FMODEvents.instance.playerRollSound, this.transform.position); //Play Roll Sound
+            // AudioManager.instance.PlayOneShot(FMODEvents.instance.playerRollSound, this.transform.position); //Play Roll Sound
+
+            //Engine Sound
+            //  Speed.setValue = 1;
 
             if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
                 {
