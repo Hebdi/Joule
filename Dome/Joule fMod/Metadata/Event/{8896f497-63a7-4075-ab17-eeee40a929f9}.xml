@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{8896f497-63a7-4075-ab17-eeee40a929f9}">
 		<property name="name">
-			<value>Cursor Hover Text</value>
+			<value>Hover</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>

@@ -4739,8 +4739,8 @@ MonoBehaviour:
   AllowNonRigidbodyDoppler: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 6.52
-  OverrideMaxDistance: 21.117737
+  OverrideMinDistance: 20
+  OverrideMaxDistance: 30
 --- !u!1001 &978970277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6793,7 +6793,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325287686}
-  m_LocalRotation: {x: -0.12511012, y: 0.4457196, z: 0.06307149, w: 0.88413996}
+  m_LocalRotation: {x: -0.1251101, y: 0.4457196, z: 0.06307148, w: 0.88414}
   m_LocalPosition: {x: -48.803146, y: 0.06999981, z: -16.051672}
   m_LocalScale: {x: 0.40919212, y: 0.54345727, z: 0.40933225}
   m_ConstrainProportionsScale: 0

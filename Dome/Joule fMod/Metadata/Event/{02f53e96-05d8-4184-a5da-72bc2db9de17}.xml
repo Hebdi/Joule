@@ -1019,7 +1019,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>-5</value>
+			<value>-8</value>
 		</property>
 		<property name="curveShape">
 			<value>0.469482452</value>
@@ -1049,7 +1049,7 @@
 			<value>2</value>
 		</property>
 		<property name="value">
-			<value>-5</value>
+			<value>-10</value>
 		</property>
 		<property name="curveShape">
 			<value>0.469482452</value>
@@ -1087,7 +1087,7 @@
 			<value>3</value>
 		</property>
 		<property name="value">
-			<value>-4</value>
+			<value>-2</value>
 		</property>
 		<property name="curveShape">
 			<value>0.564591944</value>
