@@ -7547,11 +7547,11 @@ MonoBehaviour:
     - title: Title
       value: Mission Initialization
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Actor
       value: 1
       type: 5
@@ -7670,7 +7670,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Computer\");\r"
         type: 0
         typeString: 
       conversationID: 3
@@ -7896,7 +7896,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Computer\");\r"
         type: 0
         typeString: 
       conversationID: 3
@@ -8134,7 +8134,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Computer\");\r"
         type: 0
         typeString: 
       conversationID: 3
@@ -8373,7 +8373,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Computer\");\r"
         type: 0
         typeString: 
       conversationID: 3
@@ -8428,7 +8428,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Computer\");\r"
         type: 0
         typeString: 
       conversationID: 3
@@ -8617,6 +8617,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+        value: "PlayNPCSound(\"Computer\");\r"
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
         value: 
         type: 0
         typeString: 
@@ -8831,7 +8835,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Computer\");\r"
         type: 0
         typeString: 
       conversationID: 3
@@ -9083,7 +9087,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Computer\");\r"
         type: 0
         typeString: 
       conversationID: 3
@@ -9112,8 +9116,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 253.77322}
-    canvasZoom: 0.91650045
+    canvasScrollPosition: {x: 0, y: 59.02058}
+    canvasZoom: 0.31925046
   - id: 4
     fields:
     - title: Title

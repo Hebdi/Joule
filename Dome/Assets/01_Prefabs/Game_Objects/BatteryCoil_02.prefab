@@ -608,7 +608,6 @@ GameObject:
   - component: {fileID: 7721719639867980779}
   - component: {fileID: 7721719639867980782}
   - component: {fileID: 4840707374954475088}
-  - component: {fileID: 27647391747268327}
   - component: {fileID: 6201462048844192799}
   m_Layer: 0
   m_Name: BatteryCoil_02
@@ -708,32 +707,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7abb279775f198242b46e8b304918ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batteryCollectedSound:
-    Guid:
-      Data1: -1177919529
-      Data2: 1329503522
-      Data3: -164095563
-      Data4: 1523045938
-    Path: event:/Other/Collecting Battery
---- !u!114 &27647391747268327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7487347391819016337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9222f3f55ea5c2c4898d82df5bad4283, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinCollectedSound:
-    Guid:
-      Data1: -156859661
-      Data2: 1251910790
-      Data3: -480733791
-      Data4: 69721438
-    Path: event:/Player/Player Happy Short
 --- !u!114 &6201462048844192799
 MonoBehaviour:
   m_ObjectHideFlags: 0
