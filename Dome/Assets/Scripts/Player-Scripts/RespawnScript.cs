@@ -14,22 +14,18 @@ public class RespawnScript : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (Input.GetKey(KeyCode.G))
+        //if (Input.GetKey(KeyCode.G))
         {
             // transform.position = new Vector3(-4484.958984375f, 14f, -2720.81591796875f);
-            transform.position = BridgePosition.transform.position;
+        //    transform.position = BridgePosition.transform.position;
         }
-        if (Input.GetKey(KeyCode.H))
+        //if (Input.GetKey(KeyCode.H))
         {
-            transform.position = DinerPosition.transform.position;
+       //     transform.position = DinerPosition.transform.position;
         }
-        if (Input.GetKey(KeyCode.J))
+        //if (Input.GetKey(KeyCode.J))
         {
-            transform.position = VariablePosition.transform.position;
-        }
-        if (Input.GetKey(KeyCode.H))
-        {
-            transform.position = new Vector3(-4834.35009765625f, 64.52999877929688f, -2081.090087890625f);
+       //     transform.position = VariablePosition.transform.position;
         }
     }
 
@@ -41,7 +37,20 @@ public class RespawnScript : MonoBehaviour
             transform.position = BridgePosition.transform.position;
 
         }
+        if (other.CompareTag("OffmapLeft"))
+        {
+
+            transform.position = VariablePosition.transform.position;
+
+        }
+        if (other.CompareTag("OffmapRight"))
+        {
+
+            transform.position = DinerPosition.transform.position;
+
+        }
     }
+
 }
 //Infront of Diner: UnityEditor.TransformWorldPlacementJSON:{"position":{"x":-4834.35009765625,"y":64.52999877929688,"z":-2081.090087890625},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"scale":{"x":1.0,"y":1.0,"z":1.0}}
 //Infront of Bridge: UnityEditor.TransformWorldPlacementJSON:{"position":{"x":-4484.958984375,"y":14.0,"z":-2720.81591796875},"rotation":{"x":0.0,"y":0.9975530505180359,"z":0.0,"w":0.0699143037199974},"scale":{"x":7.0,"y":7.0,"z":7.0}}

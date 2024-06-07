@@ -18,6 +18,8 @@ TagManager:
   - Sand1
   - Sand2
   - Monument
+  - OffmapRight
+  - OffmapLeft
   layers:
   - Default
   - TransparentFX

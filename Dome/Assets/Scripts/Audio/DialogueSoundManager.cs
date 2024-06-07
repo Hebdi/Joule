@@ -14,6 +14,8 @@ public class DialogueSoundManager : MonoBehaviour
     private EventReference appliancesTalkSound; // FMOD event reference for Appliances talk sound
     [SerializeField]
     private EventReference joulesTalkSound; // FMOD event reference for Joules talk sound
+    [SerializeField]
+    private EventReference monumentTalkSound; // FMOD event reference for Monument talk sound
 
     private Transform playerTransform;
 
@@ -37,6 +39,10 @@ public class DialogueSoundManager : MonoBehaviour
 
     public void PlayNPCSound(string npcName)
     {
+        // Trim whitespace and remove surrounding quotes
+        npcName = npcName.Trim().Trim('"');
+        Debug.Log($"PlayNPCSound called with npcName: '{npcName}'");
+
         EventReference soundToPlay = default;
 
         switch (npcName)
@@ -47,17 +53,20 @@ public class DialogueSoundManager : MonoBehaviour
             case "Appliances":
                 soundToPlay = appliancesTalkSound;
                 break;
-            case "Joules":
+            case "Joule":
                 soundToPlay = joulesTalkSound;
                 break;
+            case "Monument":
+                soundToPlay = monumentTalkSound;
+                break;
             default:
-                Debug.LogWarning("Unknown NPC name: " + npcName);
+                Debug.LogWarning($"Unknown NPC name: '{npcName}'");
                 return;
         }
 
         if (soundToPlay.IsNull)
         {
-            Debug.LogWarning("Sound not assigned for NPC: " + npcName);
+            Debug.LogWarning($"Sound not assigned for NPC: '{npcName}'");
             return;
         }
 
@@ -73,5 +82,9 @@ public class DialogueSoundManager : MonoBehaviour
 
         // Release the instance once it is done
         instance.release();
+
+        Debug.Log($"Playing sound for NPC: '{npcName}'");
     }
+
+
 }
