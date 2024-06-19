@@ -527,6 +527,12 @@ MonoBehaviour:
         destinationDialogueID: 17
         isConnector: 0
         priority: 2
+      - originConversationID: 1
+        originDialogueID: 3
+        destinationConversationID: 1
+        destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -654,6 +660,12 @@ MonoBehaviour:
         originDialogueID: 5
         destinationConversationID: 1
         destinationDialogueID: 56
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 5
+        destinationConversationID: 1
+        destinationDialogueID: 8
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3963,8 +3975,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 210.2691, y: 82.051544}
-    canvasZoom: 0.8202508
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.54675025
   - id: 2
     fields:
     - title: Title
@@ -4291,6 +4303,12 @@ MonoBehaviour:
         originDialogueID: 12
         destinationConversationID: 2
         destinationDialogueID: 13
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 12
+        destinationConversationID: 2
+        destinationDialogueID: 56
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -4627,6 +4645,12 @@ MonoBehaviour:
         destinationDialogueID: 19
         isConnector: 0
         priority: 2
+      - originConversationID: 2
+        originDialogueID: 18
+        destinationConversationID: 2
+        destinationDialogueID: 56
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -4798,6 +4822,12 @@ MonoBehaviour:
         originDialogueID: 21
         destinationConversationID: 2
         destinationDialogueID: 49
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 21
+        destinationConversationID: 2
+        destinationDialogueID: 56
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -5135,25 +5165,19 @@ MonoBehaviour:
       - originConversationID: 2
         originDialogueID: 27
         destinationConversationID: 2
-        destinationDialogueID: 35
+        destinationDialogueID: 80
         isConnector: 0
         priority: 2
       - originConversationID: 2
         originDialogueID: 27
         destinationConversationID: 2
-        destinationDialogueID: 6
+        destinationDialogueID: 49
         isConnector: 0
         priority: 2
       - originConversationID: 2
         originDialogueID: 27
         destinationConversationID: 2
         destinationDialogueID: 56
-        isConnector: 0
-        priority: 2
-      - originConversationID: 2
-        originDialogueID: 27
-        destinationConversationID: 2
-        destinationDialogueID: 80
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -5270,6 +5294,12 @@ MonoBehaviour:
         originDialogueID: 29
         destinationConversationID: 2
         destinationDialogueID: 15
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 29
+        destinationConversationID: 2
+        destinationDialogueID: 56
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -5836,13 +5866,13 @@ MonoBehaviour:
       - originConversationID: 2
         originDialogueID: 47
         destinationConversationID: 2
-        destinationDialogueID: 56
+        destinationDialogueID: 80
         isConnector: 0
         priority: 2
       - originConversationID: 2
         originDialogueID: 47
         destinationConversationID: 2
-        destinationDialogueID: 80
+        destinationDialogueID: 56
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6014,6 +6044,12 @@ MonoBehaviour:
         originDialogueID: 51
         destinationConversationID: 2
         destinationDialogueID: 56
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 51
+        destinationConversationID: 2
+        destinationDialogueID: 80
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6245,13 +6281,13 @@ MonoBehaviour:
       - originConversationID: 2
         originDialogueID: 55
         destinationConversationID: 2
-        destinationDialogueID: 56
+        destinationDialogueID: 57
         isConnector: 0
         priority: 2
       - originConversationID: 2
         originDialogueID: 55
         destinationConversationID: 2
-        destinationDialogueID: 57
+        destinationDialogueID: 56
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6472,13 +6508,7 @@ MonoBehaviour:
       - originConversationID: 2
         originDialogueID: 59
         destinationConversationID: 2
-        destinationDialogueID: 35
-        isConnector: 0
-        priority: 2
-      - originConversationID: 2
-        originDialogueID: 59
-        destinationConversationID: 2
-        destinationDialogueID: 15
+        destinationDialogueID: 80
         isConnector: 0
         priority: 2
       - originConversationID: 2
@@ -6613,6 +6643,12 @@ MonoBehaviour:
         originDialogueID: 61
         destinationConversationID: 2
         destinationDialogueID: 35
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 61
+        destinationConversationID: 2
+        destinationDialogueID: 56
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -7779,8 +7815,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 354.7656, y: 42.187412}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 232.37727, y: 0}
+    canvasZoom: 0.5445004
   - id: 3
     fields:
     - title: Title
@@ -9356,7 +9392,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.97925
+    canvasZoom: 0.77700126
   - id: 4
     fields:
     - title: Title
@@ -9729,12 +9765,6 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 5
         destinationConversationID: 4
-        destinationDialogueID: 11
-        isConnector: 0
-        priority: 2
-      - originConversationID: 4
-        originDialogueID: 5
-        destinationConversationID: 4
         destinationDialogueID: 25
         isConnector: 0
         priority: 2
@@ -9742,6 +9772,12 @@ MonoBehaviour:
         originDialogueID: 5
         destinationConversationID: 4
         destinationDialogueID: 27
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 5
+        destinationConversationID: 4
+        destinationDialogueID: 11
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -10375,6 +10411,18 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 16
         destinationConversationID: 4
+        destinationDialogueID: 17
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 16
+        destinationConversationID: 4
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 16
+        destinationConversationID: 4
         destinationDialogueID: 11
         isConnector: 0
         priority: 2
@@ -10823,7 +10871,25 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 24
+        destinationConversationID: 4
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 24
+        destinationConversationID: 4
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 24
+        destinationConversationID: 4
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -11071,6 +11137,12 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 28
         destinationConversationID: 4
+        destinationDialogueID: 29
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 28
+        destinationConversationID: 4
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
@@ -11083,7 +11155,7 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 28
         destinationConversationID: 4
-        destinationDialogueID: 29
+        destinationDialogueID: 11
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -11381,8 +11453,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 57.121273}
-    canvasZoom: 0.7000003
+    canvasScrollPosition: {x: 0, y: 35.543076}
+    canvasZoom: 0.6712506
   - id: 5
     fields:
     - title: Title
@@ -13611,6 +13683,12 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
+      - originConversationID: 6
+        originDialogueID: 29
+        destinationConversationID: 6
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       - originConversationID: 6
         originDialogueID: 29
         destinationConversationID: 6
