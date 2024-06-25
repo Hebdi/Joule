@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerAnimations : MonoBehaviour
 {
-
     // Animation Hydraulics
     public Animator hydraulicRightAnim;
     public Animator hydraulicLeftAnim;
@@ -14,40 +13,48 @@ public class PlayerAnimations : MonoBehaviour
     // Animation of Player
     private Animator mAnimator;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        mAnimator = GetComponent<Animator>();
-    }
-
     // Update is called once per frame
     void Update()
     {
+        // Handle forward movement
         if (Input.GetKeyDown(KeyCode.W))
         {
-            hydraulicRightAnim.SetTrigger("Hydraulic-Close-right");
-            hydraulicLeftAnim.SetTrigger("Hydraulic-Close-left");
-            wheelSpinnAnim.SetTrigger("Spinn-Forward");
-            moveLeanAnim.SetTrigger("Lean-Forward");
+            SetMovementParameters(true, false);
         }
-
 
         if (Input.GetKeyUp(KeyCode.W))
         {
-            hydraulicRightAnim.SetTrigger("Hydraulic-Open-right");
-            hydraulicLeftAnim.SetTrigger("Hydraulic-Open-left");
-            wheelSpinnAnim.SetTrigger("Spinn-Stop");
-            moveLeanAnim.SetTrigger("Lean-Stop");
+            SetMovementParameters(false, false);
         }
 
+        // Handle backward movement
         if (Input.GetKeyDown(KeyCode.S))
         {
-            wheelSpinnAnim.SetTrigger("Spinn-Backward");
+            SetMovementParameters(false, true);
         }
 
         if (Input.GetKeyUp(KeyCode.S))
         {
-            wheelSpinnAnim.SetTrigger("Spinn-Stop-back");
+            SetMovementParameters(false, false);
         }
+    }
+
+    void SetMovementParameters(bool isMovingForward, bool isMovingBackward)
+    {
+        // Hydraulic animations
+        hydraulicRightAnim.SetBool("Hydraulic-Close-right", isMovingForward || isMovingBackward);
+        hydraulicRightAnim.SetBool("Hydraulic-Open-right", !(isMovingForward || isMovingBackward));
+
+        hydraulicLeftAnim.SetBool("Hydraulic-Close-left", isMovingForward || isMovingBackward);
+        hydraulicLeftAnim.SetBool("Hydraulic-Open-left", !(isMovingForward || isMovingBackward));
+
+        // Wheel spin animations
+        wheelSpinnAnim.SetBool("Spinn-Forward", isMovingForward);
+        wheelSpinnAnim.SetBool("Spinn-Backward", isMovingBackward);
+        wheelSpinnAnim.SetBool("Spinn-Stop", !(isMovingForward || isMovingBackward));
+
+        // Move lean animations
+        moveLeanAnim.SetBool("Lean-Forward", isMovingForward);
+        moveLeanAnim.SetBool("Lean-Stop", !(isMovingForward || isMovingBackward));
     }
 }
