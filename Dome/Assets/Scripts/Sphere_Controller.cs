@@ -6,7 +6,9 @@ using FMODUnity;
 public class Sphere_Controller : MonoBehaviour
 {
     public float speed = 30f;
-    public float turnspeed = 5f;
+    public float maxTurnSpeed = 5f; // Maximum turn speed when stationary
+    public float minTurnSpeed = 1f; // Minimum turn speed when moving
+    public float maxVelocityForTurnSpeed = 15f; // Velocity considered for max turn speed
     public float gravityMultiplier = 30f;
     public float boostMultiplier = 1.2f; // Reduced boost multiplier
     public LayerMask groundLayer;
@@ -70,13 +72,16 @@ public class Sphere_Controller : MonoBehaviour
         float turn = 0f;
         if (Input.GetKey(KeyCode.D))
         {
-            turn = turnspeed;
+            turn = 1f;
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            turn = -turnspeed;
+            turn = -1f;
         }
-        rb.AddTorque(Vector3.up * turn * 10f);
+
+        // Calculate turn speed based on current velocity
+        float currentTurnSpeed = Mathf.Lerp(maxTurnSpeed, minTurnSpeed, rb.velocity.magnitude / maxVelocityForTurnSpeed);
+        rb.AddTorque(Vector3.up * turn * currentTurnSpeed * 10f);
     }
 
     void ApplyGravity()
