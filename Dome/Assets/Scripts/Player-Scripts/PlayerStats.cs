@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -20,12 +21,21 @@ public class PlayerStats : MonoBehaviour
 
     public GameObject pickupEffect;
 
+    public Image healthImage; // Reference to the image whose alpha will be adjusted
+    public Image blinkImage; // Reference to the image that will blink
+    public float blinkStartSpeed = 2.0f; // Slower blinking speed at 40% health
+    public float blinkEndSpeed = 0.1f; // Faster blinking speed at 0% health
+
+    private Coroutine blinkCoroutine;
+
     void Start()
     {
         Lives = startLives;
         Rounds = 0;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        UpdateHealthImageAlpha();
+        StartCoroutine(UpdateBlinkingSpeed());
     }
 
     void Update()
@@ -55,6 +65,8 @@ public class PlayerStats : MonoBehaviour
         currentHealth -= Mathf.RoundToInt(drainAmount);
         currentHealth = Mathf.Max(currentHealth, 0);
         healthBar.SetHealth(currentHealth);
+        UpdateHealthImageAlpha();
+        CheckHealthForBlinking();
 
         if (currentHealth <= 0)
         {
@@ -68,12 +80,24 @@ public class PlayerStats : MonoBehaviour
         currentHealth -= damage;
         currentHealth = Mathf.Max(currentHealth, 0);
         healthBar.SetHealth(currentHealth);
+        UpdateHealthImageAlpha();
+        CheckHealthForBlinking();
 
         if (currentHealth <= 0)
         {
             Debug.Log("Player has died");
             this.enabled = false;
         }
+    }
+
+    void GainHealth(int heal)
+    {
+        currentHealth += heal;
+        currentHealth = Mathf.Min(currentHealth, maxHealth);
+        healthBar.SetHealth(currentHealth);
+        UpdateHealthImageAlpha();
+        CheckHealthForBlinking();
+        Debug.Log("Your battery gained 20 charge!");
     }
 
     void OnTriggerEnter(Collider other)
@@ -91,6 +115,7 @@ public class PlayerStats : MonoBehaviour
             Destroy(other.gameObject);
             Debug.Log("You are fully charged!");
             healthBar.SetHealth(currentHealth);
+            UpdateHealthImageAlpha();
         }
 
         if (other.CompareTag("NPC"))
@@ -107,11 +132,67 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    void GainHealth(int heal)
+    void UpdateHealthImageAlpha()
     {
-        currentHealth += heal;
-        currentHealth = Mathf.Min(currentHealth, maxHealth);
-        healthBar.SetHealth(currentHealth);
-        Debug.Log("Your battery gained 20 charge!");
+        // Calculate the alpha value based on current health
+        float alpha = (float)currentHealth / maxHealth;
+        Color color = healthImage.color;
+        color.a = alpha;
+        healthImage.color = color;
+    }
+
+    void CheckHealthForBlinking()
+    {
+        if (currentHealth < maxHealth * 0.4f)
+        {
+            if (blinkCoroutine == null)
+            {
+                blinkCoroutine = StartCoroutine(BlinkImage(blinkStartSpeed));
+            }
+        }
+        else
+        {
+            if (blinkCoroutine != null)
+            {
+                StopCoroutine(blinkCoroutine);
+                blinkCoroutine = null;
+                SetBlinkImageAlpha(0f); // Ensure the blink image is hidden when health is above 40%
+            }
+        }
+    }
+
+    IEnumerator UpdateBlinkingSpeed()
+    {
+        while (true)
+        {
+            if (currentHealth < maxHealth * 0.4f)
+            {
+                // Calculate new blink speed
+                float blinkSpeed = Mathf.Lerp(blinkStartSpeed, blinkEndSpeed, (1 - (float)currentHealth / (maxHealth * 0.4f)));
+
+                // Wait for the current blink cycle to complete
+                yield return new WaitUntil(() => blinkCoroutine == null); // Wait until blinking is stopped
+
+                blinkCoroutine = StartCoroutine(BlinkImage(blinkSpeed));
+            }
+            yield return new WaitForSeconds(1.0f); // Update every second
+        }
+    }
+
+    IEnumerator BlinkImage(float blinkSpeed)
+    {
+        while (true)
+        {
+            float pingPong = Mathf.PingPong(Time.time * blinkSpeed, 1f);
+            SetBlinkImageAlpha(pingPong);
+            yield return null;
+        }
+    }
+
+    void SetBlinkImageAlpha(float alpha)
+    {
+        Color color = blinkImage.color;
+        color.a = alpha;
+        blinkImage.color = color;
     }
 }

@@ -10,51 +10,79 @@ public class PlayerAnimations : MonoBehaviour
     public Animator wheelSpinnAnim;
     public Animator moveLeanAnim;
 
-    // Animation of Player
-    private Animator mAnimator;
+    private bool isMovingForward = false;
+    private bool isMovingBackward = false;
 
-    // Update is called once per frame
     void Update()
     {
         // Handle forward movement
         if (Input.GetKeyDown(KeyCode.W))
         {
-            SetMovementParameters(true, false);
+            isMovingForward = true;
+            isMovingBackward = false;
+            SetMovementParameters();
         }
 
         if (Input.GetKeyUp(KeyCode.W))
         {
-            SetMovementParameters(false, false);
+            isMovingForward = false;
+            SetMovementParameters();
         }
 
         // Handle backward movement
         if (Input.GetKeyDown(KeyCode.S))
         {
-            SetMovementParameters(false, true);
+            isMovingBackward = true;
+            isMovingForward = false;
+            SetMovementParameters();
         }
 
         if (Input.GetKeyUp(KeyCode.S))
         {
-            SetMovementParameters(false, false);
+            isMovingBackward = false;
+            SetMovementParameters();
         }
     }
 
-    void SetMovementParameters(bool isMovingForward, bool isMovingBackward)
+    void SetMovementParameters()
     {
-        // Hydraulic animations
-        hydraulicRightAnim.SetBool("Hydraulic-Close-right", isMovingForward || isMovingBackward);
-        hydraulicRightAnim.SetBool("Hydraulic-Open-right", !(isMovingForward || isMovingBackward));
+        bool isMoving = isMovingForward || isMovingBackward;
 
-        hydraulicLeftAnim.SetBool("Hydraulic-Close-left", isMovingForward || isMovingBackward);
-        hydraulicLeftAnim.SetBool("Hydraulic-Open-left", !(isMovingForward || isMovingBackward));
+        // Hydraulic animations
+        hydraulicRightAnim.SetBool("Hydraulic-Close-right", isMoving);
+        hydraulicRightAnim.SetBool("Hydraulic-Open-right", !isMoving);
+
+        hydraulicLeftAnim.SetBool("Hydraulic-Close-left", isMoving);
+        hydraulicLeftAnim.SetBool("Hydraulic-Open-left", !isMoving);
 
         // Wheel spin animations
         wheelSpinnAnim.SetBool("Spinn-Forward", isMovingForward);
         wheelSpinnAnim.SetBool("Spinn-Backward", isMovingBackward);
-        wheelSpinnAnim.SetBool("Spinn-Stop", !(isMovingForward || isMovingBackward));
+
+        if (!isMoving)
+        {
+            wheelSpinnAnim.SetBool("Spinn-Forward", false);
+            wheelSpinnAnim.SetBool("Spinn-Backward", false);
+            wheelSpinnAnim.SetBool("Spinn-Stop", true);
+            wheelSpinnAnim.SetBool("Spinn-Stop-back", true);
+        }
+        else
+        {
+            wheelSpinnAnim.SetBool("Spinn-Stop", false);
+            wheelSpinnAnim.SetBool("Spinn-Stop-back", false);
+        }
 
         // Move lean animations
         moveLeanAnim.SetBool("Lean-Forward", isMovingForward);
-        moveLeanAnim.SetBool("Lean-Stop", !(isMovingForward || isMovingBackward));
+
+        if (!isMoving)
+        {
+            moveLeanAnim.SetBool("Lean-Forward", false);
+            moveLeanAnim.SetBool("Lean-Stop", true);
+        }
+        else
+        {
+            moveLeanAnim.SetBool("Lean-Stop", false);
+        }
     }
 }
