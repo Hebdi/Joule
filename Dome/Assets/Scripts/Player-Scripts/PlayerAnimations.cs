@@ -10,8 +10,9 @@ public class PlayerAnimations : MonoBehaviour
     public Animator wheelSpinnAnim;
     public Animator moveLeanAnim;
 
-    // Animation of Player
-    private Animator mAnimator;
+    // Track the direction of the last movement
+    private bool wasMovingForward;
+    private bool wasMovingBackward;
 
     // Update is called once per frame
     void Update()
@@ -19,27 +20,51 @@ public class PlayerAnimations : MonoBehaviour
         // Handle forward movement
         if (Input.GetKeyDown(KeyCode.W))
         {
-            SetMovementParameters(true, false);
+            StopAllCoroutines(); // Stop any running coroutine
+            SetMovementParameters(true, false, false, false);
+            wasMovingForward = true;
+            wasMovingBackward = false;
         }
 
         if (Input.GetKeyUp(KeyCode.W))
         {
-            SetMovementParameters(false, false);
+            StartCoroutine(ResetMovementParameters());
         }
 
         // Handle backward movement
         if (Input.GetKeyDown(KeyCode.S))
         {
-            SetMovementParameters(false, true);
+            StopAllCoroutines(); // Stop any running coroutine
+            SetMovementParameters(false, true, false, false);
+            wasMovingForward = false;
+            wasMovingBackward = true;
         }
 
         if (Input.GetKeyUp(KeyCode.S))
         {
-            SetMovementParameters(false, false);
+            StartCoroutine(ResetMovementParameters());
         }
     }
 
-    void SetMovementParameters(bool isMovingForward, bool isMovingBackward)
+    IEnumerator ResetMovementParameters()
+    {
+        yield return new WaitForSeconds(0.1f); // Small delay to allow smooth transition
+
+        // Handle stopping movement
+        if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S))
+        {
+            if (wasMovingForward)
+            {
+                SetMovementParameters(false, false, true, false);
+            }
+            else if (wasMovingBackward)
+            {
+                SetMovementParameters(false, false, false, true);
+            }
+        }
+    }
+
+    void SetMovementParameters(bool isMovingForward, bool isMovingBackward, bool isStopping, bool isStoppingBackward)
     {
         // Hydraulic animations
         hydraulicRightAnim.SetBool("Hydraulic-Close-right", isMovingForward || isMovingBackward);
@@ -51,10 +76,11 @@ public class PlayerAnimations : MonoBehaviour
         // Wheel spin animations
         wheelSpinnAnim.SetBool("Spinn-Forward", isMovingForward);
         wheelSpinnAnim.SetBool("Spinn-Backward", isMovingBackward);
-        wheelSpinnAnim.SetBool("Spinn-Stop", !(isMovingForward || isMovingBackward));
+        wheelSpinnAnim.SetBool("Spinn-Stop", isStopping);
+        wheelSpinnAnim.SetBool("Spinn-Stop-back", isStoppingBackward);
 
         // Move lean animations
         moveLeanAnim.SetBool("Lean-Forward", isMovingForward);
-        moveLeanAnim.SetBool("Lean-Stop", !(isMovingForward || isMovingBackward));
+        moveLeanAnim.SetBool("Lean-Stop", isStopping || isStoppingBackward);
     }
 }
