@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{872516bb-a644-41fc-92a3-694d15895fa4}">
+		<property name="name">
+			<value>Low Battery</value>
+		</property>
+		<relationship name="folder">
+			<destination>{3912e7f8-e416-4de2-8cb7-aed7eaff46ba}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{5e56f801-0177-41dc-8f44-846f2d79ffe1}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{5e56f801-0177-41dc-8f44-846f2d79ffe1}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
