@@ -14,18 +14,18 @@ public class RespawnScript : MonoBehaviour
     void FixedUpdate()
     {
 
-        //if (Input.GetKey(KeyCode.G))
+        if (Input.GetKey(KeyCode.G))
         {
             // transform.position = new Vector3(-4484.958984375f, 14f, -2720.81591796875f);
-        //    transform.position = BridgePosition.transform.position;
+            transform.position = BridgePosition.transform.position;
         }
-        //if (Input.GetKey(KeyCode.H))
+        if (Input.GetKey(KeyCode.H))
         {
-       //     transform.position = DinerPosition.transform.position;
+            transform.position = DinerPosition.transform.position;
         }
-        //if (Input.GetKey(KeyCode.J))
+        if (Input.GetKey(KeyCode.J))
         {
-       //     transform.position = VariablePosition.transform.position;
+            transform.position = VariablePosition.transform.position;
         }
     }
 

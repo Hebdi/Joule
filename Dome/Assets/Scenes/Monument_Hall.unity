@@ -301,7 +301,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73700102}
-  m_LocalRotation: {x: -0.0000000010980912, y: 0.9979615, z: 0.063818835, w: 0.000000017171306}
+  m_LocalRotation: {x: 0.0000000010980913, y: 0.9979615, z: 0.06381884, w: -0.000000017171306}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7551,7 +7551,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325287686}
-  m_LocalRotation: {x: -0.1251101, y: 0.44571966, z: 0.0630715, w: 0.88414}
+  m_LocalRotation: {x: -0.1251101, y: 0.44571963, z: 0.06307149, w: 0.88414}
   m_LocalPosition: {x: -48.803146, y: 0.06999981, z: -16.051672}
   m_LocalScale: {x: 0.40919212, y: 0.54345727, z: 0.40933225}
   m_ConstrainProportionsScale: 0
@@ -10409,7 +10409,12 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 1708822291}
   energyUse: 10
+  boostHealthDrainPerSecond: 50
   pickupEffect: {fileID: 0}
+  healthImage: {fileID: 0}
+  blinkImage: {fileID: 0}
+  blinkStartSpeed: 2
+  blinkEndSpeed: 0.1
 --- !u!1 &1710670499
 GameObject:
   m_ObjectHideFlags: 0
@@ -13193,6 +13198,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1955875034212987922, guid: 0ecdf252f291c95499dd6d398c34dd31, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4882198055376678796, guid: 0ecdf252f291c95499dd6d398c34dd31, type: 3}
       propertyPath: m_Name
       value: Player_1
@@ -13243,7 +13252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4882198055376678802, guid: 0ecdf252f291c95499dd6d398c34dd31, type: 3}
       propertyPath: speed
-      value: 120
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4882198055376678802, guid: 0ecdf252f291c95499dd6d398c34dd31, type: 3}
       propertyPath: dustTrail
@@ -13256,6 +13265,14 @@ PrefabInstance:
     - target: {fileID: 4882198055376678802, guid: 0ecdf252f291c95499dd6d398c34dd31, type: 3}
       propertyPath: turnspeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882198055376678802, guid: 0ecdf252f291c95499dd6d398c34dd31, type: 3}
+      propertyPath: maxTurnSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882198055376678802, guid: 0ecdf252f291c95499dd6d398c34dd31, type: 3}
+      propertyPath: minTurnSpeed
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4882198055376678802, guid: 0ecdf252f291c95499dd6d398c34dd31, type: 3}
       propertyPath: boostMultiplier
@@ -13277,6 +13294,10 @@ PrefabInstance:
       propertyPath: hydraulicRightAnim
       value: 
       objectReference: {fileID: 1954570412, guid: 8d14aa9f495ed9b4d964f37a8961dc1c, type: 3}
+    - target: {fileID: 4882198055376678802, guid: 0ecdf252f291c95499dd6d398c34dd31, type: 3}
+      propertyPath: maxVelocityForTurnSpeed
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 4882198055376678802, guid: 0ecdf252f291c95499dd6d398c34dd31, type: 3}
       propertyPath: upgradeSound.Guid.Data1
       value: 811757207
@@ -33472,10 +33493,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startLives: 20
-  maxHealth: 1000
+  maxHealth: 100000
   healthBar: {fileID: 1708822291}
   energyUse: 1
+  boostHealthDrainPerSecond: 50
   pickupEffect: {fileID: 0}
+  healthImage: {fileID: 0}
+  blinkImage: {fileID: 0}
+  blinkStartSpeed: 2
+  blinkEndSpeed: 0.1
 --- !u!114 &7712315768330021920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34101,8 +34127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3263f4c11dd9947be74807b5f49ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Material1: {fileID: 2100000, guid: 6872bcbc9c5f89648aeebd96dbb9ebbf, type: 2}
+  BlendMaterial: {fileID: 0}
   Object: {fileID: 7211123375150369431}
+  transitionDuration: 1
 --- !u!114 &8001758854536161562
 MonoBehaviour:
   m_ObjectHideFlags: 0
