@@ -65,38 +65,32 @@ public class GroundCheckAudio : MonoBehaviour
                 speed = Mathf.MoveTowards(speed, 0f, Time.deltaTime * 2f); // Adjust the multiplier for desired deceleration
             }
 
-            // Check for boost activation
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                isBoosting = true;
-            }
-
-            // Check for boost deactivation
-            if (Input.GetKeyUp(KeyCode.LeftShift))
-            {
-                isBoosting = false;
-            }
-
             // Set the speed parameter in FMOD
             rollOnGround.setParameterByName("Speed", speed);
-
-            // Set 3D attributes
-            rollOnGround.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform));
-
-            // Start the sound if it's not already playing
-            FMOD.Studio.PLAYBACK_STATE playbackState;
-            rollOnGround.getPlaybackState(out playbackState);
-            if (playbackState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
-            {
-                rollOnGround.start();
-            }
         }
         else
         {
-            // Stop the sound if not grounded
-            rollOnGround.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            speed = 0f;
+            // Set the TerrainType parameter to 5 to indicate the engine sound
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("TerrainType", 5f);
         }
+
+        // Set 3D attributes
+        rollOnGround.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform));
+
+        // Start the sound if it's not already playing
+        FMOD.Studio.PLAYBACK_STATE playbackState;
+        rollOnGround.getPlaybackState(out playbackState);
+        if (playbackState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+        {
+            rollOnGround.start();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        // Stop and release the FMOD event when the object is destroyed
+        rollOnGround.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        rollOnGround.release();
     }
 
     // Function to convert terrain type tags to corresponding float values for FMOD
