@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity; // Add this to access FMOD Unity classes
 
 public class PlayerStats : MonoBehaviour
 {
@@ -27,6 +28,12 @@ public class PlayerStats : MonoBehaviour
     public float blinkEndSpeed = 0.1f; // Faster blinking speed at 0% health
 
     private Coroutine blinkCoroutine;
+
+    // FMOD variables
+    private FMOD.Studio.EventInstance lowBatteryEvent;
+    public EventReference lowBatteryEventReference; // Assign this in the inspector
+
+    private bool lowBatteryEventStarted = false; // Track if the event has been started
 
     void Start()
     {
@@ -148,7 +155,17 @@ public class PlayerStats : MonoBehaviour
             if (blinkCoroutine == null)
             {
                 blinkCoroutine = StartCoroutine(BlinkImage(blinkStartSpeed));
+                // Start the FMOD event when health is below 40%
+                if (!lowBatteryEventStarted)
+                {
+                    lowBatteryEvent = FMODUnity.RuntimeManager.CreateInstance(lowBatteryEventReference);
+                    FMODUnity.RuntimeManager.AttachInstanceToGameObject(lowBatteryEvent, transform, GetComponent<Rigidbody>());
+                    lowBatteryEvent.start();
+                    lowBatteryEventStarted = true;
+                }
+                lowBatteryEvent.setParameterByName("Low Battery", 0f); // Start at 0f
             }
+            UpdateLowBatteryParameter();
         }
         else
         {
@@ -156,7 +173,13 @@ public class PlayerStats : MonoBehaviour
             {
                 StopCoroutine(blinkCoroutine);
                 blinkCoroutine = null;
-                SetBlinkImageAlpha(0f); // Ensure the blink image is hidden when health is above 30%
+                SetBlinkImageAlpha(0f); // Ensure the blink image is hidden when health is above 40%
+                // Stop the FMOD event if health is 40% or above
+                if (lowBatteryEventStarted)
+                {
+                    lowBatteryEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); // Stop immediately without fade-out
+                    lowBatteryEventStarted = false;
+                }
             }
         }
     }
@@ -165,7 +188,7 @@ public class PlayerStats : MonoBehaviour
     {
         while (true)
         {
-            if (currentHealth < maxHealth * 0.4f)
+            if (currentHealth < maxHealth * 0.3f)
             {
                 // Calculate new blink speed
                 float blinkSpeed = Mathf.Lerp(blinkStartSpeed, blinkEndSpeed, (1 - (float)currentHealth / (maxHealth * 0.3f)));
@@ -174,6 +197,8 @@ public class PlayerStats : MonoBehaviour
                 yield return new WaitUntil(() => blinkCoroutine == null); // Wait until blinking is stopped
 
                 blinkCoroutine = StartCoroutine(BlinkImage(blinkSpeed));
+                // Update FMOD parameter for low battery
+                UpdateLowBatteryParameter();
             }
             yield return new WaitForSeconds(0.2f); // Update every second
         }
@@ -194,5 +219,20 @@ public class PlayerStats : MonoBehaviour
         Color color = blinkImage.color;
         color.a = alpha;
         blinkImage.color = color;
+    }
+
+    void UpdateLowBatteryParameter()
+    {
+        // Map health to LowBattery parameter (0f at 40% health, 1f at 10% health)
+        float batteryLevel = Mathf.InverseLerp(maxHealth * 0.3f, maxHealth * 0.1f, currentHealth);
+        lowBatteryEvent.setParameterByName("Low Battery", batteryLevel);
+        Debug.Log("Updating LowBattery parameter to " + batteryLevel);
+
+        // Stop the event when health reaches 0%
+        if (currentHealth <= 0 && lowBatteryEventStarted)
+        {
+            lowBatteryEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); // Stop immediately
+            lowBatteryEventStarted = false;
+        }
     }
 }

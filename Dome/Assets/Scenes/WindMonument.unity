@@ -427,7 +427,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11362415}
-  m_LocalRotation: {x: 0.19702065, y: -0.7841334, z: 0.30813894, w: 0.5013663}
+  m_LocalRotation: {x: 0.19702068, y: -0.7841334, z: 0.30813894, w: 0.5013664}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17439,7 +17439,7 @@ GameObject:
   m_Layer: 0
   m_Name: FadeOutZone_Bridge
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -34746,7 +34746,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344496516}
-  m_LocalRotation: {x: 2.9878844e-10, y: 0.99984926, z: 0.017364977, w: -0.000000017203787}
+  m_LocalRotation: {x: -2.9878877e-10, y: 0.99984926, z: 0.017364997, w: 0.000000017203787}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -60598,7 +60598,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895056730}
-  m_LocalRotation: {x: 0.17937945, y: -0.7944227, z: 0.2805482, w: 0.50794524}
+  m_LocalRotation: {x: 0.1793795, y: -0.7944227, z: 0.28054816, w: 0.50794524}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -77608,43 +77608,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8945543933842694124, guid: f161828291450984abd17a37b85524af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4600.8896
+      value: -4600.95
       objectReference: {fileID: 0}
     - target: {fileID: 8945543933842694124, guid: f161828291450984abd17a37b85524af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 62.37682
+      value: 59.06
       objectReference: {fileID: 0}
     - target: {fileID: 8945543933842694124, guid: f161828291450984abd17a37b85524af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1011.25006
+      value: -1012.59
       objectReference: {fileID: 0}
     - target: {fileID: 8945543933842694124, guid: f161828291450984abd17a37b85524af, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.16850539
+      value: 0.0010989712
       objectReference: {fileID: 0}
     - target: {fileID: 8945543933842694124, guid: f161828291450984abd17a37b85524af, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.69323367
+      value: 0.6972383
       objectReference: {fileID: 0}
     - target: {fileID: 8945543933842694124, guid: f161828291450984abd17a37b85524af, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6935066
+      value: 0.71368355
       objectReference: {fileID: 0}
     - target: {fileID: 8945543933842694124, guid: f161828291450984abd17a37b85524af, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.10040766
+      value: -0.06718173
       objectReference: {fileID: 0}
     - target: {fileID: 8945543933842694124, guid: f161828291450984abd17a37b85524af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -21.894
+      value: 5.591
       objectReference: {fileID: 0}
     - target: {fileID: 8945543933842694124, guid: f161828291450984abd17a37b85524af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 185.846
+      value: 185.311
       objectReference: {fileID: 0}
     - target: {fileID: 8945543933842694124, guid: f161828291450984abd17a37b85524af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 88.846
+      value: 88.924
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f161828291450984abd17a37b85524af, type: 3}
@@ -87539,7 +87539,7 @@ MonoBehaviour:
   playerTransform: {fileID: 1443541076}
   fadeOutZones:
   - transform: {fileID: 213264944}
-    minRadius: 50
+    minRadius: 20
     maxRadius: 250
     minVolume: 0
   - transform: {fileID: 910018934}
@@ -103936,7 +103936,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321954091}
-  m_LocalRotation: {x: -0.35431448, y: -0.602003, z: -0.33825466, w: 0.63058513}
+  m_LocalRotation: {x: -0.35434636, y: -0.60194343, z: -0.33822122, w: 0.63064194}
   m_LocalPosition: {x: -42.173355, y: -0.24200022, z: 5.6640534}
   m_LocalScale: {x: 0.40919212, y: 0.54345596, z: 0.40933132}
   m_ConstrainProportionsScale: 0
@@ -104476,7 +104476,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325287686}
-  m_LocalRotation: {x: 0.056132995, y: -0.9438581, z: -0.22807342, w: -0.23230053}
+  m_LocalRotation: {x: 0.05611142, y: -0.9438801, z: -0.22807872, w: -0.2322113}
   m_LocalPosition: {x: -43.24329, y: -0.23099937, z: 6.2260427}
   m_LocalScale: {x: 0.40919217, y: 0.5434573, z: 0.4093323}
   m_ConstrainProportionsScale: 0
@@ -133974,11 +133974,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: 120a5b1ab3a017842bf5216be72c3e93, type: 3}
       propertyPath: m_LODs.Array.data[0].screenRelativeHeight
-      value: 0.7429541
+      value: 0.41948614
       objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: 120a5b1ab3a017842bf5216be72c3e93, type: 3}
       propertyPath: m_LODs.Array.data[1].screenRelativeHeight
-      value: 0.65758085
+      value: 0.35599297
       objectReference: {fileID: 0}
     - target: {fileID: 6348892992826071544, guid: 120a5b1ab3a017842bf5216be72c3e93, type: 3}
       propertyPath: m_LocalPosition.y
@@ -156223,7 +156223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7828301121769812523, guid: 92e20db513311fb4d80d7c05c1028949, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 66.92
+      value: 58.79
       objectReference: {fileID: 0}
     - target: {fileID: 7828301121769812523, guid: 92e20db513311fb4d80d7c05c1028949, type: 3}
       propertyPath: m_LocalPosition.z
@@ -179908,8 +179908,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1618107505, guid: ca6d63dce952de34d99cc227185d6db8, type: 3}
+      propertyPath: groundDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618107505, guid: ca6d63dce952de34d99cc227185d6db8, type: 3}
+      propertyPath: landingSoundEvent.Path
+      value: event:/Player/Terrain Bump
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618107505, guid: ca6d63dce952de34d99cc227185d6db8, type: 3}
       propertyPath: terrainTypeArray.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618107505, guid: ca6d63dce952de34d99cc227185d6db8, type: 3}
+      propertyPath: landingSoundEvent.Guid.Data1
+      value: -1908277660
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618107505, guid: ca6d63dce952de34d99cc227185d6db8, type: 3}
+      propertyPath: landingSoundEvent.Guid.Data2
+      value: 1078846315
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618107505, guid: ca6d63dce952de34d99cc227185d6db8, type: 3}
+      propertyPath: landingSoundEvent.Guid.Data3
+      value: 917141159
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618107505, guid: ca6d63dce952de34d99cc227185d6db8, type: 3}
+      propertyPath: landingSoundEvent.Guid.Data4
+      value: -615521080
       objectReference: {fileID: 0}
     - target: {fileID: 1618107505, guid: ca6d63dce952de34d99cc227185d6db8, type: 3}
       propertyPath: terrainTypeArray.Array.data[4]
@@ -180085,11 +180109,31 @@ PrefabInstance:
       objectReference: {fileID: 2089434166}
     - target: {fileID: 7712315768330021919, guid: ca6d63dce952de34d99cc227185d6db8, type: 3}
       propertyPath: blinkEndSpeed
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7712315768330021919, guid: ca6d63dce952de34d99cc227185d6db8, type: 3}
       propertyPath: blinkStartSpeed
-      value: 0.8
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712315768330021919, guid: ca6d63dce952de34d99cc227185d6db8, type: 3}
+      propertyPath: lowBatteryEventReference.Path
+      value: event:/Player/Alarm Low Battery
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712315768330021919, guid: ca6d63dce952de34d99cc227185d6db8, type: 3}
+      propertyPath: lowBatteryEventReference.Guid.Data1
+      value: 934116591
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712315768330021919, guid: ca6d63dce952de34d99cc227185d6db8, type: 3}
+      propertyPath: lowBatteryEventReference.Guid.Data2
+      value: 1290852381
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712315768330021919, guid: ca6d63dce952de34d99cc227185d6db8, type: 3}
+      propertyPath: lowBatteryEventReference.Guid.Data3
+      value: 1525638036
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712315768330021919, guid: ca6d63dce952de34d99cc227185d6db8, type: 3}
+      propertyPath: lowBatteryEventReference.Guid.Data4
+      value: -741134670
       objectReference: {fileID: 0}
     - target: {fileID: 7712315768330021920, guid: ca6d63dce952de34d99cc227185d6db8, type: 3}
       propertyPath: healthSlider
