@@ -13,6 +13,13 @@ TagManager:
   - CinemachineTarget
   - CameraZone
   - MusicZone
+  - EndMusic
+  - Concrete
+  - Sand1
+  - Sand2
+  - Monument
+  - OffmapRight
+  - OffmapLeft
   layers:
   - Default
   - TransparentFX
@@ -21,8 +28,8 @@ TagManager:
   - Water
   - UI
   - Post-Processing
-  - 
-  - 
+  - Ground
+  - Post-Processing 2
   - 
   - 
   - 

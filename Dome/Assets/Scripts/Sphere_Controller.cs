@@ -5,22 +5,22 @@ using FMODUnity;
 
 public class Sphere_Controller : MonoBehaviour
 {
-    // public GameObject dustTrail;
-
-    public float speed;
-    public float turnspeed;
-    public float gravitymultiplier;
-    //boost at 4 at the start, after upgrade 8 already enough
-    public float boost;
+    public float speed = 30f;
+    public float maxTurnSpeed = 5f; // Maximum turn speed when stationary
+    public float minTurnSpeed = 1f; // Minimum turn speed when moving
+    public float maxVelocityForTurnSpeed = 15f; // Velocity considered for max turn speed
+    public float gravityMultiplier = 30f;
+    public float boostMultiplier = 1.2f; // Reduced boost multiplier
+    public LayerMask groundLayer;
 
     private Rigidbody rb;
 
     [SerializeField] private EventReference upgradeSound;
-    //[SerializeField] private EventReference playerRollSound;
 
+    void Awake()
+    {
+    }
 
-
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -33,87 +33,85 @@ public class Sphere_Controller : MonoBehaviour
             this.enabled = false;
             return;
         }
-
-
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         Move();
         Turn();
-        Fall();
+        ApplyGravity();
     }
 
     void Move()
     {
+        Vector3 forceDirection = Vector3.zero;
 
-            if (Input.GetKey(KeyCode.S))
-            {
-                rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * 10);
-                
-            }
-
-
-        if (Input.GetKey(KeyCode.W))
-            {
-                rb.AddRelativeForce(-(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * 10));
-            //dustTrail.SetActive(true);
-          // AudioManager.instance.PlayOneShot(FMODEvents.instance.playerRollSound, this.transform.position); //Play Roll Sound
-
-            if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
-                {
-                    rb.AddRelativeForce(-(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * speed * boost));
-                }
-            }
-       // else
+        if (Input.GetKey(KeyCode.S))
         {
-           // dustTrail.SetActive(false);
+            forceDirection += Vector3.forward;
         }
-            Vector3 localVelocity = transform.InverseTransformDirection(rb.velocity);
-            localVelocity.x = 0;
-            rb.velocity = transform.TransformDirection(localVelocity);
+        if (Input.GetKey(KeyCode.W))
+        {
+            forceDirection -= Vector3.forward;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                forceDirection *= boostMultiplier; // Adjusted boost multiplier
+            }
+        }
+
+        forceDirection = transform.TransformDirection(forceDirection) * speed;
+        rb.AddForce(forceDirection);
+
+        Vector3 localVelocity = transform.InverseTransformDirection(rb.velocity);
+        localVelocity.x = 0;
+        rb.velocity = transform.TransformDirection(localVelocity);
     }
+
     void Turn()
     {
-        if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S))
+        float turn = 0f;
+        if (Input.GetKey(KeyCode.D))
         {
-            rb.AddTorque(Vector3.up * -turnspeed * -10);
+            turn = 1f;
         }
-
-        else if (Input.GetKey(KeyCode.D))
-        {
-            rb.AddTorque(Vector3.up * turnspeed * 10);
-        }
-
-        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S))
-        {
-            rb.AddTorque(-Vector3.up * -turnspeed * -10);
-        }
-
         else if (Input.GetKey(KeyCode.A))
         {
-            rb.AddTorque(-Vector3.up * turnspeed * 10);
+            turn = -1f;
+        }
+
+        // Calculate turn speed based on current velocity
+        float currentTurnSpeed = Mathf.Lerp(maxTurnSpeed, minTurnSpeed, rb.velocity.magnitude / maxVelocityForTurnSpeed);
+        rb.AddTorque(Vector3.up * turn * currentTurnSpeed * 10f);
+    }
+
+    void ApplyGravity()
+    {
+        RaycastHit hit;
+        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, out hit, 1f, groundLayer);
+
+        if (isGrounded)
+        {
+            Vector3 normal = hit.normal;
+            Vector3 gravity = -normal * gravityMultiplier;
+            rb.AddForce(gravity, ForceMode.Acceleration);
+
+            // Apply torque to keep the robot's upright position
+            Quaternion targetRotation = Quaternion.FromToRotation(transform.up, normal) * transform.rotation;
+            rb.MoveRotation(Quaternion.Slerp(transform.rotation, targetRotation, Time.fixedDeltaTime * 10f));
+        }
+        else
+        {
+            rb.AddForce(Vector3.down * gravityMultiplier * 2f, ForceMode.Acceleration);
         }
     }
-    void Fall()
-    {
-        rb.AddForce(Vector3.down * gravitymultiplier * 20);
-    }
 
-    // pick up power ups
-
-    void OnTriggerEnter (Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("BoostUpgrade"))
         {
-           
-            boost = boost + 2;
+            boostMultiplier += 0.2f; // Reduced boost increase
             Destroy(other.gameObject);
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.upgradeSound, this.transform.position); //play Audio when entering upgrade collider
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.upgradeSound, this.transform.position);
         }
-
     }
-
-
 }
