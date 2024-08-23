@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity; // Add this to access FMOD Unity classes
 
 public class GroundCheckAudio : MonoBehaviour
 {
@@ -9,9 +10,12 @@ public class GroundCheckAudio : MonoBehaviour
     public LayerMask groundMask;
     public string[] terrainTypeArray = new string[] { "Sand1", "Sand2", "Concrete", "Monument" };
 
+    public EventReference landingSoundEvent; // Public FMOD EventReference for landing sound
+
     float terrainTypeFloat = 1f;  // Initialize to 1 to match FMOD parameter range
     float speed = 0f;
     bool isBoosting = false;
+    bool wasGrounded = true; // Track if the player was grounded in the previous frame
 
     FMOD.Studio.EventInstance rollOnGround;
 
@@ -38,41 +42,69 @@ public class GroundCheckAudio : MonoBehaviour
 
         if (isGrounded)
         {
-            // Cast a ray downwards to detect the ground type
-            RaycastHit hit;
-            if (Physics.Raycast(groundCheck.position, Vector3.down, out hit, groundDistance, groundMask))
+            // If the player was not grounded in the previous frame, they have just landed
+            if (!wasGrounded)
             {
-                // Determine the terrain type based on the tag
-                string groundTag = hit.collider.tag;
-                terrainTypeFloat = GetTerrainTypeFloat(groundTag);
-
-                // Set the global terrain type parameter
-                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("TerrainType", terrainTypeFloat);
+                PlayLandingSound();
             }
 
-            // Check if the player is moving forward or backward
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
-            {
-                // Gradually increase the speed parameter
-                if (!isBoosting)
-                    speed = Mathf.MoveTowards(speed, 0.8f, Time.deltaTime * 2f); // Adjust the multiplier for desired acceleration
-                else
-                    speed = Mathf.MoveTowards(speed, 1f, Time.deltaTime * 2f); // Adjust the multiplier for desired acceleration during boost
-            }
-            else
-            {
-                // Gradually decrease the speed parameter
-                speed = Mathf.MoveTowards(speed, 0f, Time.deltaTime * 2f); // Adjust the multiplier for desired deceleration
-            }
+            // Handle ground-specific audio logic (e.g., terrain type and speed)
+            HandleGroundedAudio();
 
-            // Set the speed parameter in FMOD
-            rollOnGround.setParameterByName("Speed", speed);
+            wasGrounded = true;
         }
         else
         {
-            // Set the TerrainType parameter to 5 to indicate the engine sound
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("TerrainType", 5f);
+            // Handle air-specific audio logic (e.g., engine sound)
+            HandleAirborneAudio();
+
+            wasGrounded = false;
         }
+    }
+
+    void HandleGroundedAudio()
+    {
+        // Cast a ray downwards to detect the ground type
+        RaycastHit hit;
+        if (Physics.Raycast(groundCheck.position, Vector3.down, out hit, groundDistance, groundMask))
+        {
+            // Determine the terrain type based on the tag
+            string groundTag = hit.collider.tag;
+            terrainTypeFloat = GetTerrainTypeFloat(groundTag);
+
+            // Set the global terrain type parameter
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("TerrainType", terrainTypeFloat);
+        }
+
+        // Check if the player is moving forward or backward
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
+        {
+            // Gradually increase the speed parameter
+            if (!isBoosting)
+                speed = Mathf.MoveTowards(speed, 0.8f, Time.deltaTime * 2f); // Adjust the multiplier for desired acceleration
+            else
+                speed = Mathf.MoveTowards(speed, 1f, Time.deltaTime * 2f); // Adjust the multiplier for desired acceleration during boost
+        }
+        else
+        {
+            // Gradually decrease the speed parameter
+            speed = Mathf.MoveTowards(speed, 0f, Time.deltaTime * 2f); // Adjust the multiplier for desired deceleration
+        }
+
+        // Check for boost activation
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            isBoosting = true;
+        }
+
+        // Check for boost deactivation
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            isBoosting = false;
+        }
+
+        // Set the speed parameter in FMOD
+        rollOnGround.setParameterByName("Speed", speed);
 
         // Set 3D attributes
         rollOnGround.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform));
@@ -86,11 +118,21 @@ public class GroundCheckAudio : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    void HandleAirborneAudio()
     {
-        // Stop and release the FMOD event when the object is destroyed
-        rollOnGround.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        rollOnGround.release();
+        // Stop the ground-related sound if not grounded
+        rollOnGround.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        speed = 0f;
+
+        // Set the TerrainType parameter to 5f for the engine sound
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("TerrainType", 5f);
+    }
+
+    void PlayLandingSound()
+    {
+        // Play the landing sound event at the player's position
+        FMODUnity.RuntimeManager.PlayOneShot(landingSoundEvent, transform.position);
+        Debug.Log("Landing sound played");
     }
 
     // Function to convert terrain type tags to corresponding float values for FMOD
