@@ -143,7 +143,7 @@ public class PlayerStats : MonoBehaviour
 
     void CheckHealthForBlinking()
     {
-        if (currentHealth < maxHealth * 0.4f)
+        if (currentHealth < maxHealth * 0.3f)
         {
             if (blinkCoroutine == null)
             {
@@ -156,7 +156,7 @@ public class PlayerStats : MonoBehaviour
             {
                 StopCoroutine(blinkCoroutine);
                 blinkCoroutine = null;
-                SetBlinkImageAlpha(0f); // Ensure the blink image is hidden when health is above 40%
+                SetBlinkImageAlpha(0f); // Ensure the blink image is hidden when health is above 30%
             }
         }
     }
@@ -168,14 +168,14 @@ public class PlayerStats : MonoBehaviour
             if (currentHealth < maxHealth * 0.4f)
             {
                 // Calculate new blink speed
-                float blinkSpeed = Mathf.Lerp(blinkStartSpeed, blinkEndSpeed, (1 - (float)currentHealth / (maxHealth * 0.4f)));
+                float blinkSpeed = Mathf.Lerp(blinkStartSpeed, blinkEndSpeed, (1 - (float)currentHealth / (maxHealth * 0.3f)));
 
                 // Wait for the current blink cycle to complete
                 yield return new WaitUntil(() => blinkCoroutine == null); // Wait until blinking is stopped
 
                 blinkCoroutine = StartCoroutine(BlinkImage(blinkSpeed));
             }
-            yield return new WaitForSeconds(1.0f); // Update every second
+            yield return new WaitForSeconds(0.2f); // Update every second
         }
     }
 
@@ -183,7 +183,7 @@ public class PlayerStats : MonoBehaviour
     {
         while (true)
         {
-            float pingPong = Mathf.PingPong(Time.time * blinkSpeed, 1f);
+            float pingPong = Mathf.PingPong(Time.time * blinkSpeed, 2f);
             SetBlinkImageAlpha(pingPong);
             yield return null;
         }
