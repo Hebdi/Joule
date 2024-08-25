@@ -14,25 +14,15 @@ public class Sphere_Controller : MonoBehaviour
     public LayerMask groundLayer;
 
     private Rigidbody rb;
+    private bool isAcceleratingDownhill = false;
+    private float slopeAccelerationMultiplier = 1f;
+    private float maxSlopeAngle = 30f;  // Angle at which extra acceleration starts
 
     [SerializeField] private EventReference upgradeSound;
-
-    void Awake()
-    {
-    }
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-    }
-
-    void Update()
-    {
-        if (GameManager.GameIsOver)
-        {
-            this.enabled = false;
-            return;
-        }
     }
 
     void FixedUpdate()
@@ -40,6 +30,7 @@ public class Sphere_Controller : MonoBehaviour
         Move();
         Turn();
         ApplyGravity();
+        ApplySlopeAcceleration();  // Apply slope-based acceleration after gravity
     }
 
     void Move()
@@ -59,7 +50,7 @@ public class Sphere_Controller : MonoBehaviour
             }
         }
 
-        forceDirection = transform.TransformDirection(forceDirection) * speed;
+        forceDirection = transform.TransformDirection(forceDirection) * speed * slopeAccelerationMultiplier;  // Apply slope multiplier
         rb.AddForce(forceDirection);
 
         Vector3 localVelocity = transform.InverseTransformDirection(rb.velocity);
@@ -102,6 +93,38 @@ public class Sphere_Controller : MonoBehaviour
         else
         {
             rb.AddForce(Vector3.down * gravityMultiplier * 2f, ForceMode.Acceleration);
+        }
+    }
+
+    void ApplySlopeAcceleration()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f, groundLayer))
+        {
+            Vector3 groundNormal = hit.normal;
+            float slopeAngle = Vector3.Angle(groundNormal, Vector3.up);
+
+            // Calculate the direction of the slope relative to the player's forward direction
+            Vector3 slopeDirection = Vector3.Cross(groundNormal, transform.right);
+            float slopeAlignment = Vector3.Dot(slopeDirection, transform.forward);
+
+            if (slopeAngle > maxSlopeAngle && slopeAlignment < 0)  // Downhill
+            {
+                isAcceleratingDownhill = true;
+                slopeAccelerationMultiplier = 1 + ((slopeAngle - maxSlopeAngle) / 20f);  // Increase multiplier with slope angle
+            }
+            else if (slopeAngle > maxSlopeAngle && slopeAlignment > 0)  // Uphill
+            {
+                isAcceleratingDownhill = false;
+                slopeAccelerationMultiplier = Mathf.Max(0.8f, 1 - ((slopeAngle - maxSlopeAngle) / 30f));  // Decrease multiplier for uphill
+            }
+            else
+            {
+                isAcceleratingDownhill = false;
+                slopeAccelerationMultiplier = Mathf.Max(1f, slopeAccelerationMultiplier - Time.fixedDeltaTime * 0.5f);  // Gradually reduce momentum on flat ground
+            }
+
+            Debug.Log($"Slope Angle: {slopeAngle}, Slope Acceleration Multiplier: {slopeAccelerationMultiplier}");
         }
     }
 
