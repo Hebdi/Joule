@@ -15,7 +15,7 @@ public class AutoDoorEnergyVault : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("VaultKey"))
         {
             playerInsideTrigger = true;
             if (!isOpen)
@@ -27,7 +27,7 @@ public class AutoDoorEnergyVault : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("VaultKey"))
         {
             playerInsideTrigger = false;
             if (isOpen)

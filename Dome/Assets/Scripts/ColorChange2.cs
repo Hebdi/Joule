@@ -26,14 +26,29 @@ public class ColorChange2 : MonoBehaviour
     {
         // Start fading to the first state (e.g., _Color1 and _EmissionColor1)
         if (transitionCoroutine != null) StopCoroutine(transitionCoroutine);
-        transitionCoroutine = StartCoroutine(FadeMaterial(0f)); // Fade to initial state
+
+        // Only start the coroutine if the GameObject is active
+        if (gameObject.activeInHierarchy)
+        {
+            transitionCoroutine = StartCoroutine(FadeMaterial(0f)); // Fade to initial state
+        }
     }
 
     void OnDisable()
     {
-        // Start fading to the second state (e.g., _Color2 and _EmissionColor2)
+        // Only start the coroutine if the GameObject is active
         if (transitionCoroutine != null) StopCoroutine(transitionCoroutine);
-        transitionCoroutine = StartCoroutine(FadeMaterial(1f)); // Fade to alternate state
+
+        // Only start the coroutine if the GameObject is active (though in OnDisable, it typically is not)
+        if (gameObject.activeInHierarchy)
+        {
+            transitionCoroutine = StartCoroutine(FadeMaterial(1f)); // Fade to alternate state
+        }
+        else
+        {
+            // Directly set the material property if the object is inactive
+            BlendMaterial.SetFloat("_BlendFactor", 1f);
+        }
     }
 
     IEnumerator FadeMaterial(float targetBlendFactor)
