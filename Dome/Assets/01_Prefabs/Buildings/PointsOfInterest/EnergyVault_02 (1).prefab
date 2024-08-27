@@ -911,8 +911,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myDoor: {fileID: 8144748736023277910}
-  openTrigger: 1
-  closeTrigger: 0
+  closeDelay: 3
+  doorOpenSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  doorCloseSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &2924434694356310140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1660,8 +1673,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myDoor: {fileID: 8144748736023277910}
-  openTrigger: 0
-  closeTrigger: 0
+  closeDelay: 3
+  doorOpenSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  doorCloseSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &2924434695455579583
 GameObject:
   m_ObjectHideFlags: 0
