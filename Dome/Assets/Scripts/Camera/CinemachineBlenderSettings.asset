@@ -212,7 +212,7 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 0
-  - m_From: CM Diner 2
+  - m_From: CM Diner
     m_To: '**ANY CAMERA**'
     m_Blend:
       m_Style: 0
