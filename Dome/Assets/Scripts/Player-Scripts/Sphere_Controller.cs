@@ -40,7 +40,7 @@ public class Sphere_Controller : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             forceDirection -= Vector3.forward;
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.Space))
             {
                 forceDirection *= boostMultiplier; // Adjusted boost multiplier
             }

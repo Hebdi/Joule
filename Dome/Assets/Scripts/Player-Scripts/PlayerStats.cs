@@ -1,133 +1,106 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using FMODUnity; // Add this to access FMOD Unity classes
+using FMODUnity;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static int Lives;
-    public int startLives = 20;
-    public static int Rounds;
+    public int maxHealth = 1000;
+    public int currentHealth;
 
-    public int maxHealth = 1000; // Increased max health
-    public static int currentHealth;
     public HealthBar healthBar;
-
     public int energyUse = 100;
-    public float boostHealthDrainPerSecond = 50f; // High value for smoothness
+    public float boostHealthDrainPerSecond = 50f;
 
-    bool enter; // for trigger detection
     private bool isBoosting;
-
+    private bool isNearNPC;
     public GameObject pickupEffect;
-
-    public Image healthImage; // Reference to the image whose alpha will be adjusted
-    public Image blinkImage; // Reference to the image that will blink
-    public float blinkStartSpeed = 2.0f; // Slower blinking speed at 40% health
-    public float blinkEndSpeed = 0.1f; // Faster blinking speed at 0% health
+    public Image healthImage;
+    public Image blinkImage;
+    public float blinkStartSpeed = 2.0f;
+    public float blinkEndSpeed = 0.1f;
 
     private Coroutine blinkCoroutine;
-
-    // FMOD variables
     private FMOD.Studio.EventInstance lowBatteryEvent;
-    public EventReference lowBatteryEventReference; // Assign this in the inspector
-
-    private bool lowBatteryEventStarted = false; // Track if the event has been started
+    public EventReference lowBatteryEventReference;
+    private bool lowBatteryEventStarted = false;
 
     void Start()
     {
-        Lives = startLives;
-        Rounds = 0;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         UpdateHealthImageAlpha();
         StartCoroutine(UpdateBlinkingSpeed());
     }
 
-    void Update()
-    {
-        if (enter && Input.GetKeyDown(KeyCode.E))
-        {
-            LoseHealth(energyUse);
-        }
-
-        // Check if the player is boosting
-        isBoosting = Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift);
-    }
-
     void FixedUpdate()
     {
-        // Drain health if boosting and moving
+        // Handle boosting logic
+        isBoosting = Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.Space));
         if (isBoosting && currentHealth > 0)
         {
-            float drainAmount = boostHealthDrainPerSecond * Time.fixedDeltaTime;
-            DrainHealth(drainAmount);
-            Debug.Log($"Draining Health: {drainAmount} | Current Health: {currentHealth}");
+            float drainAmount = boostHealthDrainPerSecond * Time.deltaTime;
+            drainAmount = Mathf.Clamp(drainAmount, 0f, currentHealth);
+            LoseHealth(Mathf.RoundToInt(drainAmount));
         }
     }
 
-    void DrainHealth(float drainAmount)
+    void Update()
     {
-        currentHealth -= Mathf.RoundToInt(drainAmount);
-        currentHealth = Mathf.Max(currentHealth, 0);
-        healthBar.SetHealth(currentHealth);
-        UpdateHealthImageAlpha();
+        // Update blinking and FMOD parameters based on current health
         CheckHealthForBlinking();
-
-        if (currentHealth <= 0)
-        {
-            Debug.Log("Player has died");
-            this.enabled = false;
-        }
+        UpdateLowBatteryParameter();
     }
 
-    void LoseHealth(int damage)
+    public void LoseHealth(int damage)
     {
+        if (damage <= 0) return;
+
         currentHealth -= damage;
         currentHealth = Mathf.Max(currentHealth, 0);
         healthBar.SetHealth(currentHealth);
         UpdateHealthImageAlpha();
-        CheckHealthForBlinking();
 
         if (currentHealth <= 0)
         {
-            Debug.Log("Player has died");
+            StopLowBatteryEvent();
             this.enabled = false;
         }
     }
 
     void GainHealth(int heal)
     {
+        if (heal <= 0) return;
+
         currentHealth += heal;
         currentHealth = Mathf.Min(currentHealth, maxHealth);
         healthBar.SetHealth(currentHealth);
         UpdateHealthImageAlpha();
-        CheckHealthForBlinking();
-        Debug.Log("Your battery gained 20 charge!");
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("EnergyRefill") && PlayerStats.currentHealth < 800) // Adjusted max refill limit
+        if (other.CompareTag("EnergyRefill"))
         {
-            GainHealth(200);
-            Instantiate(pickupEffect, transform.position, transform.rotation);
+            if (currentHealth < 800)
+            {
+                GainHealth(200);
+                Instantiate(pickupEffect, transform.position, transform.rotation);
+            }
+            else
+            {
+                currentHealth = maxHealth;
+                Instantiate(pickupEffect, transform.position, transform.rotation);
+                healthBar.SetHealth(currentHealth);
+                UpdateHealthImageAlpha();
+            }
+
             Destroy(other.gameObject);
-        }
-        else if (other.CompareTag("EnergyRefill") && PlayerStats.currentHealth >= 800)
-        {
-            currentHealth = 1000; // Set to max health
-            Instantiate(pickupEffect, transform.position, transform.rotation);
-            Destroy(other.gameObject);
-            Debug.Log("You are fully charged!");
-            healthBar.SetHealth(currentHealth);
-            UpdateHealthImageAlpha();
         }
 
         if (other.CompareTag("NPC"))
         {
-            enter = true;
+            isNearNPC = true;
         }
     }
 
@@ -135,13 +108,20 @@ public class PlayerStats : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("NPC"))
         {
-            enter = false;
+            isNearNPC = false;
+        }
+    }
+
+    public void OnDialogueStart()
+    {
+        if (isNearNPC)
+        {
+            LoseHealth(energyUse);
         }
     }
 
     void UpdateHealthImageAlpha()
     {
-        // Calculate the alpha value based on current health
         float alpha = (float)currentHealth / maxHealth;
         Color color = healthImage.color;
         color.a = alpha;
@@ -152,20 +132,18 @@ public class PlayerStats : MonoBehaviour
     {
         if (currentHealth < maxHealth * 0.3f)
         {
+            if (!lowBatteryEventStarted)
+            {
+                lowBatteryEvent = FMODUnity.RuntimeManager.CreateInstance(lowBatteryEventReference);
+                FMODUnity.RuntimeManager.AttachInstanceToGameObject(lowBatteryEvent, transform, GetComponent<Rigidbody>());
+                lowBatteryEvent.start();
+                lowBatteryEventStarted = true;
+            }
+
             if (blinkCoroutine == null)
             {
                 blinkCoroutine = StartCoroutine(BlinkImage(blinkStartSpeed));
-                // Start the FMOD event when health is below 40%
-                if (!lowBatteryEventStarted)
-                {
-                    lowBatteryEvent = FMODUnity.RuntimeManager.CreateInstance(lowBatteryEventReference);
-                    FMODUnity.RuntimeManager.AttachInstanceToGameObject(lowBatteryEvent, transform, GetComponent<Rigidbody>());
-                    lowBatteryEvent.start();
-                    lowBatteryEventStarted = true;
-                }
-                lowBatteryEvent.setParameterByName("Low Battery", 0f); // Start at 0f
             }
-            UpdateLowBatteryParameter();
         }
         else
         {
@@ -173,13 +151,11 @@ public class PlayerStats : MonoBehaviour
             {
                 StopCoroutine(blinkCoroutine);
                 blinkCoroutine = null;
-                SetBlinkImageAlpha(0f); // Ensure the blink image is hidden when health is above 40%
-                // Stop the FMOD event if health is 40% or above
-                if (lowBatteryEventStarted)
-                {
-                    lowBatteryEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); // Stop immediately without fade-out
-                    lowBatteryEventStarted = false;
-                }
+                SetBlinkImageAlpha(0f);
+            }
+            if (lowBatteryEventStarted)
+            {
+                StopLowBatteryEvent();
             }
         }
     }
@@ -190,17 +166,23 @@ public class PlayerStats : MonoBehaviour
         {
             if (currentHealth < maxHealth * 0.3f)
             {
-                // Calculate new blink speed
-                float blinkSpeed = Mathf.Lerp(blinkStartSpeed, blinkEndSpeed, (1 - (float)currentHealth / (maxHealth * 0.3f)));
-
-                // Wait for the current blink cycle to complete
-                yield return new WaitUntil(() => blinkCoroutine == null); // Wait until blinking is stopped
-
+                float blinkSpeed = Mathf.Lerp(blinkEndSpeed, blinkStartSpeed, (float)currentHealth / (maxHealth * 0.3f));
+                if (blinkCoroutine != null)
+                {
+                    StopCoroutine(blinkCoroutine);
+                }
                 blinkCoroutine = StartCoroutine(BlinkImage(blinkSpeed));
-                // Update FMOD parameter for low battery
-                UpdateLowBatteryParameter();
             }
-            yield return new WaitForSeconds(0.2f); // Update every second
+            else
+            {
+                if (blinkCoroutine != null)
+                {
+                    StopCoroutine(blinkCoroutine);
+                    blinkCoroutine = null;
+                    SetBlinkImageAlpha(0f);
+                }
+            }
+            yield return new WaitForSeconds(0.2f);
         }
     }
 
@@ -223,15 +205,18 @@ public class PlayerStats : MonoBehaviour
 
     void UpdateLowBatteryParameter()
     {
-        // Map health to LowBattery parameter (0f at 40% health, 1f at 10% health)
-        float batteryLevel = Mathf.InverseLerp(maxHealth * 0.3f, maxHealth * 0.1f, currentHealth);
-        lowBatteryEvent.setParameterByName("Low Battery", batteryLevel);
-        Debug.Log("Updating LowBattery parameter to " + batteryLevel);
-
-        // Stop the event when health reaches 0%
-        if (currentHealth <= 0 && lowBatteryEventStarted)
+        if (lowBatteryEventStarted)
         {
-            lowBatteryEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); // Stop immediately
+            float batteryLevel = Mathf.InverseLerp(maxHealth * 0.3f, maxHealth * 0.1f, currentHealth);
+            lowBatteryEvent.setParameterByName("Low Battery", batteryLevel);
+        }
+    }
+
+    void StopLowBatteryEvent()
+    {
+        if (lowBatteryEventStarted)
+        {
+            lowBatteryEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             lowBatteryEventStarted = false;
         }
     }

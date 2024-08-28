@@ -92,12 +92,12 @@ public class GroundCheckAudio : MonoBehaviour
             speed = Mathf.MoveTowards(speed, 0f, Time.deltaTime * 2f);
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKey(KeyCode.Space))
         {
             isBoosting = true;
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKey(KeyCode.Space))
         {
             isBoosting = false;
         }

@@ -7750,7 +7750,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Computer\");\r"
         type: 0
         typeString: 
       conversationID: 3
@@ -7875,12 +7875,6 @@ MonoBehaviour:
         originDialogueID: 4
         destinationConversationID: 3
         destinationDialogueID: 5
-        isConnector: 0
-        priority: 2
-      - originConversationID: 3
-        originDialogueID: 4
-        destinationConversationID: 3
-        destinationDialogueID: 20
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -8759,6 +8753,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: ec574d66-684a-456b-b485-26c83d7ad225
+        type: 0
+        typeString: 
       conversationID: 3
       isRoot: 0
       isGroup: 0
@@ -8829,8 +8827,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 374.44012
-        y: 283.89157
+        x: 378.80692
+        y: 279.52475
         width: 160
         height: 30
     - id: 21
@@ -9196,8 +9194,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 16.730988}
-    canvasZoom: 0.77700126
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.68700135
   - id: 4
     fields:
     - title: Title
@@ -28182,11 +28180,11 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: All residents of the Vault Tower are provided with the current passcode
-          via tele luminance.
+          via teleluminance.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Appliances\");\r"
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 14
@@ -28203,6 +28201,18 @@ MonoBehaviour:
         destinationDialogueID: 32
         isConnector: 0
         priority: 2
+      - originConversationID: 14
+        originDialogueID: 31
+        destinationConversationID: 14
+        destinationDialogueID: 29
+        isConnector: 0
+        priority: 2
+      - originConversationID: 14
+        originDialogueID: 31
+        destinationConversationID: 14
+        destinationDialogueID: 25
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -28211,7 +28221,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1006.8745
-        y: 322.18756
+        y: 320.3694
         width: 160
         height: 30
     - id: 32
@@ -28296,7 +28306,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Appliances\");\r"
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 14
@@ -28367,6 +28377,18 @@ MonoBehaviour:
         originDialogueID: 34
         destinationConversationID: 14
         destinationDialogueID: 35
+        isConnector: 0
+        priority: 2
+      - originConversationID: 14
+        originDialogueID: 34
+        destinationConversationID: 14
+        destinationDialogueID: 29
+        isConnector: 0
+        priority: 2
+      - originConversationID: 14
+        originDialogueID: 34
+        destinationConversationID: 14
+        destinationDialogueID: 25
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -28462,7 +28484,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Appliances\");\r"
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 14
@@ -28477,6 +28499,18 @@ MonoBehaviour:
         originDialogueID: 36
         destinationConversationID: 14
         destinationDialogueID: 37
+        isConnector: 0
+        priority: 2
+      - originConversationID: 14
+        originDialogueID: 36
+        destinationConversationID: 14
+        destinationDialogueID: 29
+        isConnector: 0
+        priority: 2
+      - originConversationID: 14
+        originDialogueID: 36
+        destinationConversationID: 14
+        destinationDialogueID: 25
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -28542,8 +28576,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1006.8745
-        y: 622.1875
+        x: 1011.562
+        y: 619.0625
         width: 160
         height: 30
     - id: 38
@@ -28574,7 +28608,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Appliances\");\r"
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 14
@@ -28588,7 +28622,7 @@ MonoBehaviour:
       - originConversationID: 14
         originDialogueID: 38
         destinationConversationID: 14
-        destinationDialogueID: 39
+        destinationDialogueID: 40
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -28647,13 +28681,74 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
+        x: 1008.437
+        y: 817.49994
+        width: 160
+        height: 30
+    - id: 40
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 14
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: What is the passcode to your teleluminance channel, please?
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 40
+        destinationConversationID: 14
+        destinationDialogueID: 25
+        isConnector: 0
+        priority: 2
+      - originConversationID: 14
+        originDialogueID: 40
+        destinationConversationID: 14
+        destinationDialogueID: 29
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
         x: 1006.8745
         y: 722.1875
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.64000034
+    canvasScrollPosition: {x: 0, y: 73.17535}
+    canvasZoom: 0.5500004
   syncInfo:
     syncActors: 0
     syncItems: 0
