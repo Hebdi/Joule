@@ -8,7 +8,7 @@ public class energyCollect : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("BatteryCollector"))
         {
 
             AudioManager.instance.PlayOneShot(FMODEvents.instance.energyCollect, this.transform.position);

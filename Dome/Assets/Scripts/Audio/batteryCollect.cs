@@ -1,26 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using FMODUnity;
 
 public class batteryCollect : MonoBehaviour
 {
-    [SerializeField] private EventReference coinCollectedSound;
+    [SerializeField] private GameObject emptyBatteryPrefab; // Prefab to replace with
+    private bool isCollected = false; // Flag to ensure it only triggers once
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("EnergyRefill") || other.CompareTag("BoostUpgrade"))
+        if (isCollected) return; // If already collected, do nothing
+
+        if (other.CompareTag("Player")) // Ensure it's the player that collects the battery
         {
-            StartCoroutine(PlaySoundWithDelayCoroutine(0.5f));
+            // Mark as collected to prevent multiple triggers
+            isCollected = true;
+
+            // Replace with the empty battery prefab
+            ReplaceWithEmptyBattery();
         }
     }
 
-    IEnumerator PlaySoundWithDelayCoroutine(float delay)
+    private void ReplaceWithEmptyBattery()
     {
-        // Wait for the specified delay
-        yield return new WaitForSeconds(delay);
+        // Instantiate the empty battery prefab at the current battery's position and rotation
+        Instantiate(emptyBatteryPrefab, transform.position, transform.rotation);
 
-        // Play the FMOD event
-        AudioManager.instance.PlayOneShot(coinCollectedSound, this.transform.position);
+        // Destroy the current battery game object
+        Destroy(gameObject);
     }
 }

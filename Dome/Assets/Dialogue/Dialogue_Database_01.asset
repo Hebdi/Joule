@@ -60,7 +60,7 @@ MonoBehaviour:
   - id: 4
     fields:
     - title: Name
-      value: <color=#338d7d><b>Mission Control</b></color>
+      value: <color=#338d7d><b>Control Unit 1</b></color>
       type: 0
       typeString: 
     - title: Pictures
@@ -82,7 +82,7 @@ MonoBehaviour:
   - id: 8
     fields:
     - title: Name
-      value: <color=#338d7d><b>Control Unit</b></color>
+      value: <color=#338d7d><b>Control Unit 2</b></color>
       type: 0
       typeString: 
     - title: Pictures
@@ -489,7 +489,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Joule\");\r"
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -3560,7 +3560,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Appliances\");\r"
         type: 0
         typeString: 
       conversationID: 2
@@ -7620,12 +7620,12 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 23.173752}
-    canvasZoom: 0.5145005
+    canvasScrollPosition: {x: 250.55652, y: 0}
+    canvasZoom: 0.8145002
   - id: 3
     fields:
     - title: Title
-      value: Mission Initialization
+      value: Control Unit 1
       type: 0
       typeString: CustomFieldType_Text
     - title: Description
@@ -8149,7 +8149,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Why do I need to activate it.
+        value: Why do I need to activate this Monument?
         type: 0
         typeString: 
       - title: Sequence
@@ -9092,8 +9092,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Also extreme weather events have lead desertification. Your movement
-          might be restricted by the sand. '
+        value: Also extreme weather events have lead to severe desertification.
         type: 0
         typeString: 
       - title: Sequence
@@ -9194,8 +9193,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.68700135
+    canvasScrollPosition: {x: 106.60725, y: 118.08934}
+    canvasZoom: 0.89700115
   - id: 4
     fields:
     - title: Title
@@ -9324,7 +9323,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Appliances\");\r"
         type: 0
         typeString: 
       conversationID: 4
@@ -11386,7 +11385,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Joule\");\r"
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 5
@@ -12347,7 +12346,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Joule\");\r"
         type: 0
         typeString: 
       conversationID: 6
@@ -13566,7 +13565,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Computer\");\r"
         type: 0
         typeString: 
       conversationID: 7
@@ -17550,7 +17549,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Appliances\");\r"
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 9
@@ -20274,7 +20273,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Joule\");\r"
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 10
@@ -21207,7 +21206,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Appliances\");\r"
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 11
@@ -21262,7 +21261,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: "PlayNPCSound(\"Appliances\");\r"
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 11
@@ -23241,7 +23240,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 137.12418}
+    canvasScrollPosition: {x: 20.689636, y: 18.158722}
     canvasZoom: 0.5800004
   - id: 12
     fields:
@@ -23469,7 +23468,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Appliances\");\r"
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 13
@@ -23524,7 +23523,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: "PlayNPCSound(\"Appliances\");\r"
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 13
@@ -26436,7 +26435,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 79.8399, y: 207.58481}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.6700003
   - id: 14
     fields:
@@ -26566,7 +26565,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: "PlayNPCSound(\"Appliances\");\r"
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -27871,65 +27870,6 @@ MonoBehaviour:
         y: 546.1875
         width: 160
         height: 30
-    - id: 23
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 14
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: EventGuid
-        value: 88185e0e-6d8d-4444-9599-0982e28afa5a
-        type: 0
-        typeString: 
-      conversationID: 14
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 14
-        originDialogueID: 23
-        destinationConversationID: 14
-        destinationDialogueID: 25
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 264.12488
-        y: 648.6265
-        width: 160
-        height: 30
     - id: 24
       fields:
       - title: Title
@@ -27953,7 +27893,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You may proceed to the authorization station.
+        value: You may now enter the administrative office of Vault Tower.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -27971,7 +27911,7 @@ MonoBehaviour:
       - originConversationID: 14
         originDialogueID: 24
         destinationConversationID: 14
-        destinationDialogueID: 23
+        destinationDialogueID: 42
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -28036,8 +27976,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 22.500076
-        y: 234.6875
+        x: 69.09099
+        y: 152.86932
         width: 160
         height: 30
     - id: 29
@@ -28746,9 +28686,123 @@ MonoBehaviour:
         y: 722.1875
         width: 160
         height: 30
+    - id: 41
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 14
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Cool thanks!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 41
+        destinationConversationID: 14
+        destinationDialogueID: 39
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 260.5955
+        y: 720.4937
+        width: 160
+        height: 30
+    - id: 42
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 14
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 82d8343e-9be7-4135-9609-4358ab4d9a79
+        type: 0
+        typeString: 
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 42
+        destinationConversationID: 14
+        destinationDialogueID: 41
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 264.12488
+        y: 646.1875
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 73.17535}
-    canvasZoom: 0.5500004
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.85000014
   syncInfo:
     syncActors: 0
     syncItems: 0

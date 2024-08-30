@@ -21,6 +21,7 @@ TagManager:
   - OffmapRight
   - OffmapLeft
   - VaultKey
+  - BatteryCollector
   layers:
   - Default
   - TransparentFX
