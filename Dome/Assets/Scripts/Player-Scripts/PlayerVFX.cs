@@ -39,15 +39,15 @@ public class PlayerVFX : MonoBehaviour
                 }
 
                 // Play the FMOD sound events after their respective delays
-                if (!string.IsNullOrEmpty(effectSetting.soundEvent1.Path))
+                if (effectSetting.soundEvent1.IsNull == false)
                 {
                     StartCoroutine(PlaySoundWithDelay(effectSetting.soundEvent1, effectSetting.soundDelay1));
                 }
-                if (!string.IsNullOrEmpty(effectSetting.soundEvent2.Path))
+                if (effectSetting.soundEvent2.IsNull == false)
                 {
                     StartCoroutine(PlaySoundWithDelay(effectSetting.soundEvent2, effectSetting.soundDelay2));
                 }
-                if (!string.IsNullOrEmpty(effectSetting.soundEvent3.Path))
+                if (effectSetting.soundEvent3.IsNull == false)
                 {
                     StartCoroutine(PlaySoundWithDelay(effectSetting.soundEvent3, effectSetting.soundDelay3));
                 }
