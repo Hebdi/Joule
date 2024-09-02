@@ -266,9 +266,10 @@ GameObject:
   - component: {fileID: 5314607611942592459}
   - component: {fileID: 4781947333594109180}
   - component: {fileID: 1113476742640732045}
+  - component: {fileID: 8311315738344633401}
   m_Layer: 0
   m_Name: Battery_LOD0
-  m_TagString: Untagged
+  m_TagString: EnergyRefill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,6 +343,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &8311315738344633401
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3641505903643681986}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.9999999
+  m_Height: 16.22194
+  m_Direction: 1
+  m_Center: {x: 0, y: 4.777646, z: -0.0009765755}
 --- !u!1 &6043033221812594397
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +626,7 @@ GameObject:
   - component: {fileID: 2445774752357866880}
   m_Layer: 0
   m_Name: BatteryCoil_02
-  m_TagString: EnergyRefill
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -704,7 +719,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 7487347391819016337}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 1.0341413
   m_Height: 4.95026
   m_Direction: 1
