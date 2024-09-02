@@ -13,8 +13,6 @@ public class PlayerStats : MonoBehaviour
     public float boostHealthDrainPerSecond = 50f;
 
     private bool isBoosting;
-    private bool isNearNPC;
-    public GameObject pickupEffect;
     public Image healthImage;
     public Image blinkImage;
     public float blinkStartSpeed = 2.0f;
@@ -85,40 +83,19 @@ public class PlayerStats : MonoBehaviour
             if (currentHealth < 800)
             {
                 GainHealth(200);
-                Instantiate(pickupEffect, transform.position, transform.rotation);
             }
             else
             {
                 currentHealth = maxHealth;
-                Instantiate(pickupEffect, transform.position, transform.rotation);
                 healthBar.SetHealth(currentHealth);
                 UpdateHealthImageAlpha();
             }
 
             Destroy(other.gameObject);
         }
-
-        if (other.CompareTag("NPC"))
-        {
-            isNearNPC = true;
-        }
     }
 
-    void OnTriggerExit(Collider collider)
-    {
-        if (collider.gameObject.CompareTag("NPC"))
-        {
-            isNearNPC = false;
-        }
-    }
 
-    public void OnDialogueStart()
-    {
-        if (isNearNPC)
-        {
-            LoseHealth(energyUse);
-        }
-    }
 
     void UpdateHealthImageAlpha()
     {

@@ -1,8 +1,10 @@
-Shader "Unlit/Selection"
+Shader "Custom/Selection"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        _HighlightColor ("Highlight Color", Color) = (1, 1, 0, 1) // Default to yellow
+        _Glow ("Glow Intensity", Range(0, 1)) = 0.5 // Intensity of the glow
     }
     SubShader
     {
@@ -11,10 +13,10 @@ Shader "Unlit/Selection"
 
         Pass
         {
+            Name "Base"
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            // make fog work
             #pragma multi_compile_fog
 
             #include "UnityCG.cginc"
@@ -34,25 +36,33 @@ Shader "Unlit/Selection"
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
+            float4 _HighlightColor;
+            float _Glow;
 
             v2f vert (appdata v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-                UNITY_TRANSFER_FOG(o,o.vertex);
+                UNITY_TRANSFER_FOG(o, o.vertex);
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
-                // sample the texture
-                fixed4 col = tex2D(_MainTex, i.uv);
-                // apply fog
+                // Sample the texture
+                fixed4 texColor = tex2D(_MainTex, i.uv);
+
+                // Blend texture color with highlight color based on glow intensity
+                fixed4 col = lerp(texColor, _HighlightColor, _Glow);
+
+                // Apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);
+
                 return col;
             }
             ENDCG
         }
     }
+    Fallback "Diffuse"
 }
