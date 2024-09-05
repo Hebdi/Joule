@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 968762822467698124}
   - component: {fileID: 5416602261042498237}
   - component: {fileID: 791232595582506278}
-  - component: {fileID: 791232595582506275}
   - component: {fileID: 2426404014350227957}
+  - component: {fileID: 1838631530981951693}
   m_Layer: 0
   m_Name: BatteryCoil_01
   m_TagString: Untagged
@@ -83,22 +83,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &791232595582506275
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448789907821487990}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5766962, y: 0.072179034, z: 1.6114051}
-  m_Center: {x: 0, y: -1.3594844, z: 0}
+  m_CollisionDetection: 2
 --- !u!136 &2426404014350227957
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -106,13 +93,26 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448789907821487990}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 77363f07948b3df46a81593166a5b2ff, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.1211381
-  m_Height: 4.363934
+  m_Radius: 1.086692
+  m_Height: 4.241126
   m_Direction: 1
-  m_Center: {x: 0, y: 0.80262345, z: 0}
+  m_Center: {x: 0, y: 0.8640287, z: -0.03444592}
+--- !u!65 &1838631530981951693
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448789907821487990}
+  m_Material: {fileID: 13400000, guid: 77363f07948b3df46a81593166a5b2ff, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3869805, y: 0.048870243, z: 1}
+  m_Center: {x: 0, y: -1.2807609, z: 0}
 --- !u!1 &881067757341392469
 GameObject:
   m_ObjectHideFlags: 0

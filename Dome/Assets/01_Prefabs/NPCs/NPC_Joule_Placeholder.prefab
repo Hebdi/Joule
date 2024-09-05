@@ -1664,8 +1664,7 @@ GameObject:
   - component: {fileID: 2002725646994390924}
   - component: {fileID: 7773026701633445444}
   - component: {fileID: 6275204653175145043}
-  - component: {fileID: 7248791965710716362}
-  - component: {fileID: 8151096847885891471}
+  - component: {fileID: 8010640866887016973}
   m_Layer: 0
   m_Name: Eye-Lense
   m_TagString: Untagged
@@ -1738,34 +1737,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7248791965710716362
+--- !u!114 &8010640866887016973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7673643837617846780}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c2aa904206341843a57fef97f846315, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e3263f4c11dd9947be74807b5f49ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Material1: {fileID: 2100000, guid: 826e482780dd6e34eb9f0ae951587459, type: 2}
+  BlendMaterial: {fileID: 2100000, guid: 871407a30d23e994694c54a57dd59b4c, type: 2}
   Object: {fileID: 7673643837617846780}
---- !u!114 &8151096847885891471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7673643837617846780}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c2aa904206341843a57fef97f846315, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Material1: {fileID: 2100000, guid: 37c02d07f637e634f9d0c48936d48b1d, type: 2}
-  Object: {fileID: 7673643837617846780}
+  transitionDuration: 3
 --- !u!1 &9112612821218223729
 GameObject:
   m_ObjectHideFlags: 0
@@ -2114,7 +2100,7 @@ MonoBehaviour:
     onConversationStart:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7248791965710716362}
+        - m_Target: {fileID: 8010640866887016973}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -2126,9 +2112,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 8151096847885891471}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-          m_MethodName: set_enabled
+        - m_Target: {fileID: 4852427020331827670}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2136,12 +2122,12 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 1
+            m_BoolArgument: 0
           m_CallState: 2
     onConversationEnd:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7248791965710716362}
+        - m_Target: {fileID: 8010640866887016973}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -2153,9 +2139,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 8151096847885891471}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-          m_MethodName: set_enabled
+        - m_Target: {fileID: 4852427020331827670}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2163,7 +2149,7 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
     runOnConversationEndEventsAtEndOfFrame: 0
     onConversationCancelled:

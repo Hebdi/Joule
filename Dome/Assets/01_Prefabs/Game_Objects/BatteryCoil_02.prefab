@@ -353,10 +353,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.9999999
-  m_Height: 16.22194
+  m_Radius: 1.3526489
+  m_Height: 19.264643
   m_Direction: 1
-  m_Center: {x: 0, y: 4.777646, z: -0.0009765755}
+  m_Center: {x: 0, y: 4.7776456, z: -0.0009765755}
 --- !u!1 &6043033221812594397
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,7 +622,6 @@ GameObject:
   - component: {fileID: 3096692919918069082}
   - component: {fileID: 7721719639867980779}
   - component: {fileID: 7721719639867980782}
-  - component: {fileID: 1981081704093513072}
   - component: {fileID: 2445774752357866880}
   m_Layer: 0
   m_Name: BatteryCoil_02
@@ -704,26 +703,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7487347391819016337}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 77363f07948b3df46a81593166a5b2ff, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.5993141, y: 4.291107, z: 1.7186719}
   m_Center: {x: 0, y: 0.822155, z: 0}
---- !u!136 &1981081704093513072
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7487347391819016337}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  m_Radius: 1.0341413
-  m_Height: 4.95026
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.48696, z: 0}
 --- !u!114 &2445774752357866880
 MonoBehaviour:
   m_ObjectHideFlags: 0
